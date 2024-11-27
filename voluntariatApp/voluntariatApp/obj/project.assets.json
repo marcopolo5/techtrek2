@@ -8,19 +8,19 @@
     "net8.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Alex\\.nuget\\packages\\": {}
+    "C:\\Users\\androsca\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "Q:\\info\\ProiectTechTrek\\voluntariatApp\\voluntariatApp\\voluntariatApp.csproj",
+      "projectUniqueName": "C:\\Users\\androsca\\OneDrive - NTT DATA EMEAL\\Desktop\\voluntariatApp\\voluntariatApp\\voluntariatApp.csproj",
       "projectName": "voluntariatApp",
-      "projectPath": "Q:\\info\\ProiectTechTrek\\voluntariatApp\\voluntariatApp\\voluntariatApp.csproj",
-      "packagesPath": "C:\\Users\\Alex\\.nuget\\packages\\",
-      "outputPath": "Q:\\info\\ProiectTechTrek\\voluntariatApp\\voluntariatApp\\obj\\",
+      "projectPath": "C:\\Users\\androsca\\OneDrive - NTT DATA EMEAL\\Desktop\\voluntariatApp\\voluntariatApp\\voluntariatApp.csproj",
+      "packagesPath": "C:\\Users\\androsca\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\androsca\\OneDrive - NTT DATA EMEAL\\Desktop\\voluntariatApp\\voluntariatApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Alex\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\androsca\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
