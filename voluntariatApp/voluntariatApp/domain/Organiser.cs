@@ -3,22 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using voluntariatApp.domain.Enums;
 
 namespace voluntariatApp.domain
 {
 	internal class Organiser : LoginEntity
 	{
-		private string Cui;
-		private string Name;
-		private string Tip; //To make Enum type
-		private string Description;
-		public Organiser(string cui, string name, string tip, string description, string username, string password, string phoneNumber, string email) 
+		private string Cui { get; init; }
+		private string Name { get; init; }
+		private TypeField Field { get; init; }
+		private string Description { get; init; }
+		public Organiser(string cui, string name, TypeField field, string description, string username, string password, string phoneNumber, string email) 
 			: base(username, password, phoneNumber, email)
 		{
 			this.Cui = cui;
 			this.setId(cui);
 			this.Name = name;
-			this.Tip = tip;
+			this.Field = field;
 			this.Description = description;
 		}
 	}

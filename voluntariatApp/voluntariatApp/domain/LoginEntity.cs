@@ -8,10 +8,10 @@ namespace voluntariatApp.domain
 {
 	internal abstract class LoginEntity : Entity<string>
 	{
-		private string Username { get; init; }
-		private string Password { get; init; }
-		private string PhoneNumber { get; init; }
-		private string Email { get; init; }
+		protected string Username { get; init; }
+		protected string Password { get; init; }
+		protected string PhoneNumber { get; init; }
+		protected string Email { get; init; }
 
 		public LoginEntity(string username, string password, string phoneNumber, string email)
 		{
