@@ -12,12 +12,6 @@ namespace voluntariatApp.domain
         public User(string name, string cnp, string username, string password, string phoneNumber, string email, Occupation occupation)
             : base(username, password, phoneNumber, email)
         {
-            Validator.ValidateName(name);
-            Validator.ValidateCnp(cnp);
-            Validator.ValidateOccupation(occupation);
-            Validator.ValidatePhoneNumber(phoneNumber);
-            Validator.ValidateEmail(email);
-
             Cnp = cnp;
             Name = name;
             Occupation = occupation;

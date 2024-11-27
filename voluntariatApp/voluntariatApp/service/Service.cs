@@ -25,6 +25,7 @@ namespace voluntariatApp.service
 		public void addUser ()
 		{
 			this.addLogin();
+			// TODO: to validate user
 		}
 
 		public void deleteUser()
