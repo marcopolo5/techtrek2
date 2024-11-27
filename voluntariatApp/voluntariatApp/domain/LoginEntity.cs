@@ -18,7 +18,7 @@ namespace voluntariatApp.domain
 			this.Username = username;
 			this.Password = password;
 			this.PhoneNumber = phoneNumber;
-			this.Email = email;
+			this.Email = email; 
 		}
 	}
 }

@@ -1254,19 +1254,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Alex\\.nuget\\packages\\": {}
+    "C:\\Users\\EOLTEAR8G\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "Q:\\info\\ProiectTechTrek\\voluntariatApp\\voluntariatApp\\voluntariatApp.csproj",
+      "projectUniqueName": "C:\\Users\\EOLTEAR8G\\OneDrive - NTT DATA EMEAL\\Escritorio\\projects\\volunteer-app\\voluntariatApp\\voluntariatApp\\voluntariatApp.csproj",
       "projectName": "voluntariatApp",
-      "projectPath": "Q:\\info\\ProiectTechTrek\\voluntariatApp\\voluntariatApp\\voluntariatApp.csproj",
-      "packagesPath": "C:\\Users\\Alex\\.nuget\\packages\\",
-      "outputPath": "Q:\\info\\ProiectTechTrek\\voluntariatApp\\voluntariatApp\\obj\\",
+      "projectPath": "C:\\Users\\EOLTEAR8G\\OneDrive - NTT DATA EMEAL\\Escritorio\\projects\\volunteer-app\\voluntariatApp\\voluntariatApp\\voluntariatApp.csproj",
+      "packagesPath": "C:\\Users\\EOLTEAR8G\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\EOLTEAR8G\\OneDrive - NTT DATA EMEAL\\Escritorio\\projects\\volunteer-app\\voluntariatApp\\voluntariatApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Alex\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\EOLTEAR8G\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1321,7 +1321,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
