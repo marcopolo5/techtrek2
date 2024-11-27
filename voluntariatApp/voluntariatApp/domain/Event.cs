@@ -8,7 +8,8 @@
         public EventPeriod Period { get; private set; }
         public string ParticipationRequirements { get; private set; }
         public string EventDescription { get; private set; }
-        private HashSet<User> Participants { get; }
+        public List<EventSignup> SignupList { get; init; } = new List<EventSignup>();
+        public List<Participation> ParticipationList { get; init; } = new List<Participation>();
 
         public Event(
             string name,
@@ -27,22 +28,9 @@
             Period = period ?? throw new ArgumentNullException(nameof(period));
             ParticipationRequirements = participationRequirements ?? string.Empty;
             EventDescription = eventDescription ?? string.Empty;
-            Participants = new HashSet<User>();
+            this.ParticipationRequirements = participationRequirements;
+            this.EventDescription = eventDescription;
         }
-
-        public void AddParticipant(User user)
-        {
-            if (user == null) throw new ArgumentNullException(nameof(user));
-            if (Participants.Count >= NumberOfParticipants) throw new InvalidOperationException("Event is full.");
-            Participants.Add(user);
-        }
-
-        public void RemoveParticipant(User user)
-        {
-            if (user == null) throw new ArgumentNullException(nameof(user));
-            Participants.Remove(user);
-        }
-
         public override string ToString()
         {
             return $"{Name} ({Period.StartDate:yyyy-MM-dd} to {Period.EndDate:yyyy-MM-dd}) at {Location}";

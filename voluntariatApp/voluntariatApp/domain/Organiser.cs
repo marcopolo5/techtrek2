@@ -8,19 +8,19 @@ using voluntariatApp.domain.enums;
 namespace voluntariatApp.domain
 {
     internal class Organiser : LoginEntity
-	{
-		private string Cui;
-		private string Name;
-		private OrganiserType OrganiserType; 
-		private string Description;
-		public Organiser(string cui, string name, OrganiserType organiserType, string description, string username, string password, string phoneNumber, string email) 
-			: base(username, password, phoneNumber, email)
-		{
-			this.Cui = cui;
-			this.setId(cui);
-			this.Name = name;
-			this.OrganiserType = organiserType;
-			this.Description = description;
-		}
-	}
+    {
+        private string Cui { get; init; }
+        private string Name { get; init; }
+        private OrganiserType Field { get; init; }
+        private string Description { get; init; }
+        public Organiser(string cui, string name, OrganiserType field, string description, string username, string password, string phoneNumber, string email)
+            : base(username, password, phoneNumber, email)
+        {
+            this.Cui = cui;
+            this.setId(cui);
+            this.Name = name;
+            this.Field = field;
+            this.Description = description;
+        }
+    }
 }
