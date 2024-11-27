@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("voluntariatApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7ee7190c9824b7fda57ff44eacece67293102914")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6767966b29e7578e9f0b5812ffaf02aa585e640b")]
 [assembly: System.Reflection.AssemblyProductAttribute("voluntariatApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("voluntariatApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

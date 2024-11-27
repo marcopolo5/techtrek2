@@ -3,36 +3,28 @@
   "WorkspaceRootPath": "Q:\\info\\ProiectTechTrek\\voluntariatApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{985BF877-BE5F-436A-B165-6C37EACE27A4}|voluntariatApp\\voluntariatApp.csproj|q:\\info\\proiecttechtrek\\voluntariatapp\\voluntariatapp\\domain\\organiser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985BF877-BE5F-436A-B165-6C37EACE27A4}|voluntariatApp\\voluntariatApp.csproj|solutionrelative:voluntariatapp\\domain\\organiser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{985BF877-BE5F-436A-B165-6C37EACE27A4}|voluntariatApp\\voluntariatApp.csproj|q:\\info\\proiecttechtrek\\voluntariatapp\\voluntariatapp\\domain\\loginentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985BF877-BE5F-436A-B165-6C37EACE27A4}|voluntariatApp\\voluntariatApp.csproj|solutionrelative:voluntariatapp\\domain\\loginentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{985BF877-BE5F-436A-B165-6C37EACE27A4}|voluntariatApp\\voluntariatApp.csproj|q:\\info\\proiecttechtrek\\voluntariatapp\\voluntariatapp\\domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{985BF877-BE5F-436A-B165-6C37EACE27A4}|voluntariatApp\\voluntariatApp.csproj|solutionrelative:voluntariatapp\\domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{985BF877-BE5F-436A-B165-6C37EACE27A4}|voluntariatApp\\voluntariatApp.csproj|q:\\info\\proiecttechtrek\\voluntariatapp\\voluntariatapp\\domain\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985BF877-BE5F-436A-B165-6C37EACE27A4}|voluntariatApp\\voluntariatApp.csproj|solutionrelative:voluntariatapp\\domain\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{985BF877-BE5F-436A-B165-6C37EACE27A4}|voluntariatApp\\voluntariatApp.csproj|q:\\info\\proiecttechtrek\\voluntariatapp\\voluntariatapp\\domain\\enums\\typefield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985BF877-BE5F-436A-B165-6C37EACE27A4}|voluntariatApp\\voluntariatApp.csproj|solutionrelative:voluntariatapp\\domain\\enums\\typefield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{985BF877-BE5F-436A-B165-6C37EACE27A4}|voluntariatApp\\voluntariatApp.csproj|q:\\info\\proiecttechtrek\\voluntariatapp\\voluntariatapp\\service\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985BF877-BE5F-436A-B165-6C37EACE27A4}|voluntariatApp\\voluntariatApp.csproj|solutionrelative:voluntariatapp\\service\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{985BF877-BE5F-436A-B165-6C37EACE27A4}|voluntariatApp\\voluntariatApp.csproj|q:\\info\\proiecttechtrek\\voluntariatapp\\voluntariatapp\\domain\\enums\\typeocupation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985BF877-BE5F-436A-B165-6C37EACE27A4}|voluntariatApp\\voluntariatApp.csproj|solutionrelative:voluntariatapp\\domain\\enums\\typeocupation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{985BF877-BE5F-436A-B165-6C37EACE27A4}|voluntariatApp\\voluntariatApp.csproj|q:\\info\\proiecttechtrek\\voluntariatapp\\voluntariatapp\\repo\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985BF877-BE5F-436A-B165-6C37EACE27A4}|voluntariatApp\\voluntariatApp.csproj|solutionrelative:voluntariatapp\\repo\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{985BF877-BE5F-436A-B165-6C37EACE27A4}|voluntariatApp\\voluntariatApp.csproj|q:\\info\\proiecttechtrek\\voluntariatapp\\voluntariatapp\\domain\\eventsignup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985BF877-BE5F-436A-B165-6C37EACE27A4}|voluntariatApp\\voluntariatApp.csproj|solutionrelative:voluntariatapp\\domain\\eventsignup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{985BF877-BE5F-436A-B165-6C37EACE27A4}|voluntariatApp\\voluntariatApp.csproj|q:\\info\\proiecttechtrek\\voluntariatapp\\voluntariatapp\\repo\\irepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985BF877-BE5F-436A-B165-6C37EACE27A4}|voluntariatApp\\voluntariatApp.csproj|solutionrelative:voluntariatapp\\repo\\irepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{985BF877-BE5F-436A-B165-6C37EACE27A4}|voluntariatApp\\voluntariatApp.csproj|q:\\info\\proiecttechtrek\\voluntariatapp\\voluntariatapp\\domain\\participation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985BF877-BE5F-436A-B165-6C37EACE27A4}|voluntariatApp\\voluntariatApp.csproj|solutionrelative:voluntariatapp\\domain\\participation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{985BF877-BE5F-436A-B165-6C37EACE27A4}|voluntariatApp\\voluntariatApp.csproj|q:\\info\\proiecttechtrek\\voluntariatapp\\voluntariatapp\\validator\\validator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985BF877-BE5F-436A-B165-6C37EACE27A4}|voluntariatApp\\voluntariatApp.csproj|solutionrelative:voluntariatapp\\validator\\validator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{985BF877-BE5F-436A-B165-6C37EACE27A4}|voluntariatApp\\voluntariatApp.csproj|q:\\info\\proiecttechtrek\\voluntariatapp\\voluntariatapp\\domain\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985BF877-BE5F-436A-B165-6C37EACE27A4}|voluntariatApp\\voluntariatApp.csproj|solutionrelative:voluntariatapp\\domain\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -63,105 +55,79 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Organiser.cs",
-              "DocumentMoniker": "Q:\\info\\ProiectTechTrek\\voluntariatApp\\voluntariatApp\\domain\\Organiser.cs",
-              "RelativeDocumentMoniker": "voluntariatApp\\domain\\Organiser.cs",
-              "ToolTip": "Q:\\info\\ProiectTechTrek\\voluntariatApp\\voluntariatApp\\domain\\Organiser.cs",
-              "RelativeToolTip": "voluntariatApp\\domain\\Organiser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T13:55:53.476Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LoginEntity.cs",
-              "DocumentMoniker": "Q:\\info\\ProiectTechTrek\\voluntariatApp\\voluntariatApp\\domain\\LoginEntity.cs",
-              "RelativeDocumentMoniker": "voluntariatApp\\domain\\LoginEntity.cs",
-              "ToolTip": "Q:\\info\\ProiectTechTrek\\voluntariatApp\\voluntariatApp\\domain\\LoginEntity.cs",
-              "RelativeToolTip": "voluntariatApp\\domain\\LoginEntity.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAqwBUAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T13:50:48.557Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "User.cs",
               "DocumentMoniker": "Q:\\info\\ProiectTechTrek\\voluntariatApp\\voluntariatApp\\domain\\User.cs",
               "RelativeDocumentMoniker": "voluntariatApp\\domain\\User.cs",
               "ToolTip": "Q:\\info\\ProiectTechTrek\\voluntariatApp\\voluntariatApp\\domain\\User.cs",
               "RelativeToolTip": "voluntariatApp\\domain\\User.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAABUAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T13:43:50.855Z",
+              "WhenOpened": "2024-11-27T09:33:44.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TypeField.cs",
+              "DocumentMoniker": "Q:\\info\\ProiectTechTrek\\voluntariatApp\\voluntariatApp\\domain\\Enums\\TypeField.cs",
+              "RelativeDocumentMoniker": "voluntariatApp\\domain\\Enums\\TypeField.cs",
+              "ToolTip": "Q:\\info\\ProiectTechTrek\\voluntariatApp\\voluntariatApp\\domain\\Enums\\TypeField.cs",
+              "RelativeToolTip": "voluntariatApp\\domain\\Enums\\TypeField.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T09:31:03.672Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TypeOcupation.cs",
+              "DocumentMoniker": "Q:\\info\\ProiectTechTrek\\voluntariatApp\\voluntariatApp\\domain\\Enums\\TypeOcupation.cs",
+              "RelativeDocumentMoniker": "voluntariatApp\\domain\\Enums\\TypeOcupation.cs",
+              "ToolTip": "Q:\\info\\ProiectTechTrek\\voluntariatApp\\voluntariatApp\\domain\\Enums\\TypeOcupation.cs",
+              "RelativeToolTip": "voluntariatApp\\domain\\Enums\\TypeOcupation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T09:28:34.688Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Entity.cs",
-              "DocumentMoniker": "Q:\\info\\ProiectTechTrek\\voluntariatApp\\voluntariatApp\\domain\\Entity.cs",
-              "RelativeDocumentMoniker": "voluntariatApp\\domain\\Entity.cs",
-              "ToolTip": "Q:\\info\\ProiectTechTrek\\voluntariatApp\\voluntariatApp\\domain\\Entity.cs",
-              "RelativeToolTip": "voluntariatApp\\domain\\Entity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Title": "EventSignup.cs",
+              "DocumentMoniker": "Q:\\info\\ProiectTechTrek\\voluntariatApp\\voluntariatApp\\domain\\EventSignup.cs",
+              "RelativeDocumentMoniker": "voluntariatApp\\domain\\EventSignup.cs",
+              "ToolTip": "Q:\\info\\ProiectTechTrek\\voluntariatApp\\voluntariatApp\\domain\\EventSignup.cs",
+              "RelativeToolTip": "voluntariatApp\\domain\\EventSignup.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T13:21:39.312Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Validator.cs",
-              "DocumentMoniker": "Q:\\info\\ProiectTechTrek\\voluntariatApp\\voluntariatApp\\validator\\Validator.cs",
-              "RelativeDocumentMoniker": "voluntariatApp\\validator\\Validator.cs",
-              "ToolTip": "Q:\\info\\ProiectTechTrek\\voluntariatApp\\voluntariatApp\\validator\\Validator.cs",
-              "RelativeToolTip": "voluntariatApp\\validator\\Validator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T13:19:55.4Z",
+              "WhenOpened": "2024-11-27T09:24:08.273Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Service.cs",
-              "DocumentMoniker": "Q:\\info\\ProiectTechTrek\\voluntariatApp\\voluntariatApp\\service\\Service.cs",
-              "RelativeDocumentMoniker": "voluntariatApp\\service\\Service.cs",
-              "ToolTip": "Q:\\info\\ProiectTechTrek\\voluntariatApp\\voluntariatApp\\service\\Service.cs",
-              "RelativeToolTip": "voluntariatApp\\service\\Service.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAAAAAAAAAAAAAA==",
+              "Title": "Participation.cs",
+              "DocumentMoniker": "Q:\\info\\ProiectTechTrek\\voluntariatApp\\voluntariatApp\\domain\\Participation.cs",
+              "RelativeDocumentMoniker": "voluntariatApp\\domain\\Participation.cs",
+              "ToolTip": "Q:\\info\\ProiectTechTrek\\voluntariatApp\\voluntariatApp\\domain\\Participation.cs",
+              "RelativeToolTip": "voluntariatApp\\domain\\Participation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T13:19:09.445Z",
+              "WhenOpened": "2024-11-27T09:22:50.434Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Repository.cs",
-              "DocumentMoniker": "Q:\\info\\ProiectTechTrek\\voluntariatApp\\voluntariatApp\\repo\\Repository.cs",
-              "RelativeDocumentMoniker": "voluntariatApp\\repo\\Repository.cs",
-              "ToolTip": "Q:\\info\\ProiectTechTrek\\voluntariatApp\\voluntariatApp\\repo\\Repository.cs",
-              "RelativeToolTip": "voluntariatApp\\repo\\Repository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAACAAAAAAAAAA==",
+              "Title": "Event.cs",
+              "DocumentMoniker": "Q:\\info\\ProiectTechTrek\\voluntariatApp\\voluntariatApp\\domain\\Event.cs",
+              "RelativeDocumentMoniker": "voluntariatApp\\domain\\Event.cs",
+              "ToolTip": "Q:\\info\\ProiectTechTrek\\voluntariatApp\\voluntariatApp\\domain\\Event.cs",
+              "RelativeToolTip": "voluntariatApp\\domain\\Event.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAiwBQAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T13:13:52.79Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IRepo.cs",
-              "DocumentMoniker": "Q:\\info\\ProiectTechTrek\\voluntariatApp\\voluntariatApp\\repo\\IRepo.cs",
-              "RelativeDocumentMoniker": "voluntariatApp\\repo\\IRepo.cs",
-              "ToolTip": "Q:\\info\\ProiectTechTrek\\voluntariatApp\\voluntariatApp\\repo\\IRepo.cs",
-              "RelativeToolTip": "voluntariatApp\\repo\\IRepo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T13:13:39.705Z",
+              "WhenOpened": "2024-11-27T09:16:02.01Z",
               "EditorCaption": ""
             }
           ]
