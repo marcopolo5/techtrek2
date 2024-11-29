@@ -19,15 +19,12 @@
             string participationRequirements,
             string eventDescription)
         {
-            if (string.IsNullOrWhiteSpace(name)) throw new ArgumentException("Event name cannot be null or empty.");
-            if (numberOfParticipants <= 0) throw new ArgumentException("Number of participants must be greater than zero.");
-
             Name = name;
             NumberOfParticipants = numberOfParticipants;
-            Location = location ?? throw new ArgumentNullException(nameof(location));
-            Period = period ?? throw new ArgumentNullException(nameof(period));
-            ParticipationRequirements = participationRequirements ?? string.Empty;
-            EventDescription = eventDescription ?? string.Empty;
+            Location = location;
+            Period = period;
+            ParticipationRequirements = participationRequirements;
+            EventDescription = eventDescription;
             this.ParticipationRequirements = participationRequirements;
             this.EventDescription = eventDescription;
         }

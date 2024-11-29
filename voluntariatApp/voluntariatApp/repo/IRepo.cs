@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using voluntariatApp.domain;
 
 namespace voluntariatApp.repo
 {
-	internal interface IRepo<Entity, ID>
+	internal interface IRepo<E, ID> where E : Entity<ID>
 	{
-		public Entity Save(Entity entity);
-		public Entity Find(ID id);
-		public IEnumerable<Entity> FindAll();
+		public E Save(E entity);
+		public E Find(ID id);
+		public IEnumerable<E> FindAll();
 		public void Delete(ID id);
-		public Entity Update(Entity entity);
+		public E Update(E entity);
 	}
 }
