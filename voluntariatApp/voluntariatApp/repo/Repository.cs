@@ -15,34 +15,42 @@ namespace voluntariatApp.repo
 		public Repository() {
 			this.excelFile = WorkBook.Load(".\\Baza de date.xlsx");
 			this.entityTable = this.excelFile
-				.GetWorkSheet(TypeMatching
+				.GetWorkSheet(TypeMatching<E, ID>
 								.returnTableName(typeof(E)));
 		}
 
 		public E? Find(ID id)
 		{
-			if (id is Tuple<string, long> tupleID)
+			Entity<ID>? result;
+			bool found = false;
+			if (id == null)
+				throw new ArgumentNullException("Id cannot be null.");
+			foreach (var row in this.entityTable.Rows)
 			{
-				foreach (var row in this.entityTable.Rows)
+				if (id is Tuple<string, long> tupleID)
 				{
 					if (row.ElementAt(0).Text == tupleID.Item1 &&
 						row.ElementAt(1).Text == tupleID.Item2.ToString())
 					{
-
+						found = true;
 					}
-				}
-			} else
-			{
-				foreach (var row in this.entityTable.Rows)
+				} else if(row.ElementAt(0).Text == id.ToString()) found = true;
+
+				if (found)
 				{
-					if (row.ElementAt(0).Text == id.ToString())
-					{
-
-					}
+					List<string> rowList = new List<string>();
+					foreach (var cell in row)
+						rowList.Add(cell.StringValue);
+					result = TypeMatching<E, ID>.createEntityFromList(
+							typeof(E),
+							rowList
+						);
+					if ( result != null )
+						result.setId(id);
+					return (E?)result;
 				}
 			}
 			return null;
-
 		}
 		public IEnumerable<E>? FindAll()
 		{
