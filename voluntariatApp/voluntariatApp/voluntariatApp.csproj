@@ -9,6 +9,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Baza de date.xlsx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Baza de date.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="IronXL.Excel" Version="2024.11.16" />
   </ItemGroup>
 
