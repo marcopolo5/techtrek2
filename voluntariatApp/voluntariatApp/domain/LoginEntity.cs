@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace voluntariatApp.domain
 {
-	internal abstract class LoginEntity : Entity<string>
+	internal class LoginEntity : Entity<string>
 	{
 		private string Username { get; init; }
 		private string Password { get; init; }
