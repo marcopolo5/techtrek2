@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using voluntariatApp.domain.enums;
@@ -22,5 +23,15 @@ namespace voluntariatApp.domain
             this.Field = field;
             this.Description = description;
         }
-    }
+
+        public Organiser(string cui, string name, OrganiserType field, string description)
+			: base("default", "default", "default", "default")
+        {
+            this.Cui = cui;
+            this.Name= name;
+            this.Field = field;
+            this.Description = description;
+        }
+
+	}
 }

@@ -17,6 +17,14 @@ namespace voluntariatApp.domain
             Occupation = occupation;
             setId(cnp);
         }
+        
+        public User(string cnp, string name, Occupation occupation)
+            : base("default", "default", "default", "default")
+        {
+            this.Name = name;
+            this.Cnp = cnp;
+            this.Occupation = occupation;
+        }
 
         public override string ToString()
         {
