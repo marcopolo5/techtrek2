@@ -1,8 +1,12 @@
-﻿namespace voluntariatApp.domain
+﻿using static System.Windows.Forms.AxHost;
+
+namespace voluntariatApp.domain
 {
     public class Location
     {
-        public string State { get; private set; }
+		private string[] strings;
+
+		public string State { get; private set; }
         public string City { get; private set; }
         public string StreetName { get; private set; }
         public string StreetNumber { get; private set; }
@@ -15,9 +19,17 @@
             StreetNumber = streetNumber;
         }
 
-        public override string ToString()
+		public Location(string[] strings)
+		{
+			State = strings[0];
+			City = strings[1];
+			StreetName = strings[2];
+			StreetNumber = strings[3];
+		}
+
+		public override string ToString()
         {
-            return $"{StreetNumber} {StreetName}, {City}, {State}";
+            return $"{State};{City};{StreetName};{StreetNumber}";
         }
-    }
+	}
 }
