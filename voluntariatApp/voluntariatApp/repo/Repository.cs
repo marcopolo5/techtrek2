@@ -71,10 +71,37 @@ namespace voluntariatApp.repo
         }
 
         public void Delete(ID id)
-		{
+        {
+            if (id == null)
+                throw new ArgumentNullException(nameof(id), "Id cannot be null.");
 
-		}
-		public E? Update(E entity)
+            bool rowDeleted = false;
+
+            foreach (var row in this.entityTable.Rows.Skip(1))
+            {
+                var rowId = row.ElementAt(0).Text;
+
+                if (rowId == id.ToString())
+                {
+                    for (int i = 0; i < row.Count(); i++)
+                    {
+                        row.ElementAt(i).Value = null;  
+                    }
+                    rowDeleted = true;
+                    break;  
+                }
+            }
+            if (rowDeleted)
+            {
+                this.excelFile.Save();
+            }
+            else
+            {
+                throw new InvalidOperationException("Row with the given ID not found.");
+            }
+        }
+
+        public E? Update(E entity)
 		{
 			return null;
 		}
