@@ -3,6 +3,7 @@
     internal enum Occupation
     {
         Student,
+        Elev,
         Angajat,
         Pensionar,
         Somer,
