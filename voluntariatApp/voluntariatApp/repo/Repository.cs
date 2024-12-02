@@ -1,22 +1,42 @@
-﻿using IronXL;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OfficeOpenXml;
 using voluntariatApp.domain;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace voluntariatApp.repo
 {
 	internal class Repository<E, ID> where E : Entity<ID>
 	{
-		WorkBook excelFile;
-		WorkSheet entityTable;
+		ExcelPackage excelFile;
+		ExcelWorksheet entityTable;
 		public Repository() {
-			this.excelFile = WorkBook.Load(".\\Baza de date.xlsx");
+			ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+			this.excelFile = new ExcelPackage(new FileInfo(".\\Baza de date.xlsx"));
 			this.entityTable = this.excelFile
-				.GetWorkSheet(TypeMatching<E, ID>
-								.returnTableName(typeof(E)));
+				.Workbook
+				.Worksheets[TypeMatching<E, ID>
+								.returnTableName(typeof(E))];
+		}
+
+		public E? Save (E Entity)
+		{
+            if ( Entity == null)
+				throw new ArgumentNullException("Entity cannot be null.");
+			if (this.Find(Entity.getId()) != null)
+				return null;
+			int firstEmpty = this.entityTable.Dimension.End.Row + 1;
+
+			var data = TypeMatching<E, ID>.createListFromEntity(Entity);
+
+			for (int colIndex = 1; colIndex <= data.Count; colIndex++)
+				entityTable.Cells[firstEmpty, colIndex].Value = data[colIndex - 1];
+
+			excelFile.Save();
+			return Entity;
 		}
 
 		public E? Find(ID id)
@@ -25,22 +45,24 @@ namespace voluntariatApp.repo
 			bool found = false;
 			if (id == null)
 				throw new ArgumentNullException("Id cannot be null.");
-			foreach (var row in this.entityTable.Rows)
+			for (int rowIndex = 2; rowIndex <= this.entityTable.Dimension.End.Row; rowIndex ++)
 			{
+				var row = this.entityTable.Cells[rowIndex, 1, rowIndex, this.entityTable.Dimension.End.Column];
+
 				if (id is Tuple<string, long> tupleID)
 				{
-					if (row.ElementAt(0).Text == tupleID.Item1 &&
-						row.ElementAt(1).Text == tupleID.Item2.ToString())
+					if (row.ElementAt(1).Text == tupleID.Item1 &&
+						row.ElementAt(2).Text == tupleID.Item2.ToString())
 					{
 						found = true;
 					}
-				} else if(row.ElementAt(0).Text == id.ToString()) found = true;
+				} else if(row.ElementAt(1).Text == id.ToString()) found = true;
 
 				if (found)
 				{
 					List<string> rowList = new List<string>();
-					foreach (var cell in row)
-						rowList.Add(cell.StringValue);
+					for (int columnIndex = 1; columnIndex <= this.entityTable.Dimension.End.Column; columnIndex++)
+						rowList.Add(row[1, columnIndex].Text);
 					result = TypeMatching<E, ID>.createEntityFromList(
 							typeof(E),
 							rowList
@@ -56,9 +78,14 @@ namespace voluntariatApp.repo
         {
             var resultList = new List<E>();
 
-            foreach (var row in this.entityTable.Rows.Skip(1))  // Skip the header row
-            {
-                var rowList = row.Select(cell => cell.StringValue).ToList();
+			for (int rowIndex = 2; rowIndex <= entityTable.Dimension.End.Row; rowIndex++)
+			{
+				var row = this.entityTable.Cells[rowIndex, 1, rowIndex, this.entityTable.Dimension.End.Column];
+
+				var rowList = row.Select(cell => cell.Text).ToList();
+
+				if (rowList.Any(cell => string.IsNullOrWhiteSpace(cell)))
+					continue;
 
                 var entity = TypeMatching<E, ID>.createEntityFromList(typeof(E), rowList);
 
@@ -75,30 +102,37 @@ namespace voluntariatApp.repo
             if (id == null)
                 throw new ArgumentNullException(nameof(id), "Id cannot be null.");
 
-            bool rowDeleted = false;
+			var found = false;
 
-            foreach (var row in this.entityTable.Rows.Skip(1))
-            {
-                var rowId = row.ElementAt(0).Text;
+			for (int rowIndex = 2; rowIndex <= entityTable.Dimension.End.Row; rowIndex++)
+			{
+				var row = this.entityTable.Cells[rowIndex, 1, rowIndex, this.entityTable.Dimension.End.Column];
 
-                if (rowId == id.ToString())
+				var rowId = row.ElementAt(1).Text;
+
+				if (id is Tuple<string, long> tupleID)
+				{
+					if (row.ElementAt(1).Text == tupleID.Item1 &&
+						row.ElementAt(2).Text == tupleID.Item2.ToString())
+					{
+						found = true;
+					}
+				}
+				else if (row.ElementAt(1).Text == id.ToString()) found = true;
+
+
+				if (found)
                 {
-                    for (int i = 0; i < row.Count(); i++)
+                    for (int colIndex = 1; colIndex <= row.Count(); colIndex++)
                     {
-                        row.ElementAt(i).Value = null;  
+                        row.ElementAt(colIndex).Value = null; 
                     }
-                    rowDeleted = true;
                     break;  
                 }
             }
-            if (rowDeleted)
-            {
-                this.excelFile.Save();
-            }
-            else
-            {
+			if (!found)
                 throw new InvalidOperationException("Row with the given ID not found.");
-            }
+			this.excelFile.Save(); 
         }
 
         public E? Update(E entity)
