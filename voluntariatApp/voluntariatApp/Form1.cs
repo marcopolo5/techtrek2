@@ -1,13 +1,10 @@
-
-using IronXL;
-
 namespace voluntariatApp
 {
 	public partial class Form1 : Form
 	{
-		public Form1()
+		public Form1(string print)
 		{
-			InitializeComponent();
+			InitializeComponent(print);
 
 			this.loadDb();
 

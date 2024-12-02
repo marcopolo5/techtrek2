@@ -1,4 +1,5 @@
-using IronXL;
+using voluntariatApp.repo;
+using voluntariatApp.test;
 
 namespace voluntariatApp
 {
@@ -6,8 +7,10 @@ namespace voluntariatApp
 	{
 		static void Main()
 		{
+			Tests.TestAll();
+			var print = Tests.TestRepositoryUser();
 			ApplicationConfiguration.Initialize();
-			Application.Run(new Form1());
+			Application.Run(new Form1(print));
 		}
 	}
 }

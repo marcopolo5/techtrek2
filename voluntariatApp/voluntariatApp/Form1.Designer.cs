@@ -26,7 +26,7 @@
 		///  Required method for Designer support - do not modify
 		///  the contents of this method with the code editor.
 		/// </summary>
-		private void InitializeComponent()
+		private void InitializeComponent(string print)
 		{
 			showDataLabel = new Label();
 			SuspendLayout();
@@ -38,7 +38,7 @@
 			showDataLabel.Name = "showDataLabel";
 			showDataLabel.Size = new Size(38, 15);
 			showDataLabel.TabIndex = 0;
-			showDataLabel.Text = "label1";
+			showDataLabel.Text = print;
 			// 
 			// Form1
 			// 
