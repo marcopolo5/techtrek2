@@ -61,22 +61,105 @@ namespace voluntariatApp.repo
 			}
 			else if (type == typeof(LoginEntity))
 			{
-
+				return new LoginEntity(
+					parameters[0],
+					parameters[1],
+					parameters[2],
+					parameters[3],
+					parameters[4]
+				) as E;
 			}
 			else if (type == typeof(Event))
 			{
-
+				return new Event(
+					long.Parse(parameters[0]),
+					parameters[1],
+					parameters[2],
+					int.Parse(parameters[3]),
+					new Location(parameters[4].Split(";")),
+					new EventPeriod(DateTime.Parse(parameters[5]), DateTime.Parse(parameters[6])),
+					parameters[7],
+					parameters[8]
+				) as E;
 			}
 			else if (type == typeof(EventSignup))
 			{
-
+				return new EventSignup(
+					parameters[0],
+					long.Parse(parameters[1]),
+					DateTime.Parse(parameters[2]),
+					bool.Parse(parameters[3]),
+					parameters[4]
+				) as E;
 			}
 			else if (type == typeof(Participation))
 			{
-
+				return new Participation(
+					parameters[0],
+					long.Parse(parameters[1]),
+					bool.Parse(parameters[2]),
+					parameters[3]
+				) as E;
 			}
 			else throw new ArgumentException("Invalid entity type " + type.Name);
-			return null;
+		}
+
+		public static List<string> createListFromEntity (E Entity)
+		{
+			var resultList = new List<string>();
+
+			if (Entity is User user)
+			{
+				resultList.Add(user.Cnp);
+				resultList.Add(user.Name);
+				resultList.Add(user.Occupation.ToString());
+			}
+			else if (Entity is Organiser organiser)
+			{
+				resultList.Add(organiser.Cui);
+				resultList.Add(organiser.Name);
+				resultList.Add(organiser.Field.ToString());
+				resultList.Add(organiser.Description);
+			}
+			else if (Entity is LoginEntity loginEntity)
+			{
+				resultList.Add(loginEntity.getId());
+				resultList.Add(loginEntity.Username);
+				resultList.Add(loginEntity.Password);
+				resultList.Add(loginEntity.PhoneNumber);
+				resultList.Add(loginEntity.Email);
+			}
+			else if (Entity is Event eventEntity)
+			{
+				resultList.Add(eventEntity.getId().ToString());
+				resultList.Add(eventEntity.Name);
+				resultList.Add(eventEntity.CuiOrganiser);
+				resultList.Add(eventEntity.NumberOfParticipants.ToString());
+				resultList.Add(eventEntity.Location.ToString());
+				resultList.Add(eventEntity.Period.StartDate.ToString("yyyy-MM-dd"));
+				resultList.Add(eventEntity.Period.EndDate.ToString("yyyy-MM-dd"));
+				resultList.Add(eventEntity.ParticipationRequirements);
+				resultList.Add(eventEntity.EventDescription);
+			}
+			else if (Entity is EventSignup eventSignup)
+			{
+				resultList.Add(eventSignup.getId().Item1);
+				resultList.Add(eventSignup.getId().Item2.ToString());
+				resultList.Add(eventSignup.SignupDateTime.ToString("yyyy-MM-dd"));
+				resultList.Add(eventSignup.Accepted.ToString());
+				resultList.Add(eventSignup.Reason);
+			}
+			else if (Entity is Participation participation)
+			{
+				resultList.Add(participation.getId().Item1);
+				resultList.Add(participation.getId().Item2.ToString());
+				resultList.Add(participation.Present.ToString());
+				resultList.Add(participation.Feedback);
+			}
+			else
+				throw new ArgumentException("Invalid entity type " + Entity.GetType().Name);
+
+			return resultList;
 		}
 	}
 }
