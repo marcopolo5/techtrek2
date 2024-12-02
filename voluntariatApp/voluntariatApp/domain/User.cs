@@ -28,7 +28,7 @@ namespace voluntariatApp.domain
 
         public override string ToString()
         {
-            return $"User: {Name}, Occupation: {Occupation}";
+            return $"Cnp: {Cnp}, User: {Name}, Occupation: {Occupation}";
         }
     }
 }
