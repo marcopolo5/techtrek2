@@ -10,10 +10,10 @@ namespace voluntariatApp.domain
 {
     internal class Organiser : LoginEntity
     {
-        private string Cui { get; init; }
-        private string Name { get; init; }
-        private OrganiserType Field { get; init; }
-        private string Description { get; init; }
+		public string Cui { get; init; }
+        public string Name { get; init; }
+		public OrganiserType Field { get; init; }
+		public string Description { get; init; }
         public Organiser(string cui, string name, OrganiserType field, string description, string username, string password, string phoneNumber, string email)
             : base(username, password, phoneNumber, email)
         {

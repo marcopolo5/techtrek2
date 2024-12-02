@@ -8,9 +8,9 @@ namespace voluntariatApp.domain
 {
     internal class EventSignup : Entity<Tuple<string, long>>
     {
-        private DateTime SignupDateTime { get; init; }
-        private bool Accepted { get; set; }
-        private string Reason { get; init; }
+        public DateTime SignupDateTime { get; init; }
+		public bool Accepted { get; set; }
+		public string Reason { get; init; }
 
         public EventSignup(string cnpUser, long idEvent, DateTime signupDateTime, bool accepted, string reason)
         {
