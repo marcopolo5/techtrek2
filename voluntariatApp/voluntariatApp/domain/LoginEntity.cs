@@ -8,10 +8,10 @@ namespace voluntariatApp.domain
 {
 	internal class LoginEntity : Entity<string>
 	{
-		private string Username { get; init; }
-		private string Password { get; init; }
-		private string PhoneNumber { get; init; }
-		private string Email { get; init; }
+		public string Username { get; init; }
+		public string Password { get; init; }
+		public string PhoneNumber { get; init; }
+		public string Email { get; init; }
 
 		public LoginEntity(string username, string password, string phoneNumber, string email)
 		{
@@ -19,6 +19,15 @@ namespace voluntariatApp.domain
 			this.Password = password;
 			this.PhoneNumber = phoneNumber;
 			this.Email = email; 
+		}
+
+		public LoginEntity(string idCnpOrCui, string username, string password, string phoneNumber, string email)
+		{
+			this.Username = username;
+			this.Password = password;
+			this.PhoneNumber = phoneNumber;
+			this.Email = email;
+			this.setId(idCnpOrCui);
 		}
 	}
 }
