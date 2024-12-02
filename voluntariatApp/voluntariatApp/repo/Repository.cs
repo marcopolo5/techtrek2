@@ -52,11 +52,25 @@ namespace voluntariatApp.repo
 			}
 			return null;
 		}
-		public IEnumerable<E>? FindAll()
-		{
-			return null;
-		}
-		public void Delete(ID id)
+        public IEnumerable<E> FindAll()
+        {
+            var resultList = new List<E>();
+
+            foreach (var row in this.entityTable.Rows.Skip(1))  // Skip the header row
+            {
+                var rowList = row.Select(cell => cell.StringValue).ToList();
+
+                var entity = TypeMatching<E, ID>.createEntityFromList(typeof(E), rowList);
+
+                if (entity != null)
+                {
+                    resultList.Add(entity);
+                }
+            }
+            return resultList;
+        }
+
+        public void Delete(ID id)
 		{
 
 		}
