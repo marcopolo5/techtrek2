@@ -50,14 +50,34 @@ namespace voluntariatApp.test
 			string result = "";
 			foreach (User user in repo.FindAll())
 			{
-				//File.AppendAllText(@".\\outputTest.txt", user.ToString() + "\n");
+				File.AppendAllText(@"Q:\info\ProiectTechTrek\voluntariatApp\voluntariatApp\test\outputTest.txt", user.ToString() + "\n");
 				result += user.ToString() + "\n";
 			}
 			return result;
 		}
+
+		public static void TestRepositoryAddDeleteFind()
+		{
+			var repo = new Repository<User, string>();
+			repo.testF();
+			var user = new User("Alex", "1234", "user1", "parola", "0743", "alex@gmail.com", Occupation.Student);
+			File.AppendAllText(@"Q:\info\ProiectTechTrek\voluntariatApp\voluntariatApp\test\outputTest.txt", repo.Save(user).ToString() + "\n");
+			File.AppendAllText(@"Q:\info\ProiectTechTrek\voluntariatApp\voluntariatApp\test\outputTest.txt", repo.Find("1234")!.ToString() + "\n");
+			repo.Delete("1234");
+			try
+			{
+				File.AppendAllText(@"Q:\info\ProiectTechTrek\voluntariatApp\voluntariatApp\test\outputTest.txt", repo.Find("1234")!.ToString() + "\n");
+			}
+			catch (Exception ex)
+			{
+				File.AppendAllText(@"Q:\info\ProiectTechTrek\voluntariatApp\voluntariatApp\test\outputTest.txt", ex.Message + "\n");
+			}
+		}
 		public static void TestAll()
 		{
 			TypeMatchingTest();
+			TestRepositoryAddDeleteFind();
+			
 		}
 	}
 }

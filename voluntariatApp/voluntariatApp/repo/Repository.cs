@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,7 +25,7 @@ namespace voluntariatApp.repo
 
 		public E? Save (E Entity)
 		{
-            if ( Entity == null)
+			if ( Entity == null)
 				throw new ArgumentNullException("Entity cannot be null.");
 			if (this.Find(Entity.getId()) != null)
 				return null;
@@ -32,8 +33,7 @@ namespace voluntariatApp.repo
 
 			var data = TypeMatching<E, ID>.createListFromEntity(Entity);
 
-			for (int colIndex = 1; colIndex <= data.Count; colIndex++)
-				entityTable.Cells[firstEmpty, colIndex].Value = data[colIndex - 1];
+			this.entityTable.Cells[firstEmpty, 1, firstEmpty, data.Count].LoadFromCollection(data);
 
 			excelFile.Save();
 			return Entity;
@@ -45,6 +45,7 @@ namespace voluntariatApp.repo
 			bool found = false;
 			if (id == null)
 				throw new ArgumentNullException("Id cannot be null.");
+
 			for (int rowIndex = 2; rowIndex <= this.entityTable.Dimension.End.Row; rowIndex ++)
 			{
 				var row = this.entityTable.Cells[rowIndex, 1, rowIndex, this.entityTable.Dimension.End.Column];
@@ -56,7 +57,8 @@ namespace voluntariatApp.repo
 					{
 						found = true;
 					}
-				} else if(row.ElementAt(1).Text == id.ToString()) found = true;
+				}
+				else if (row.ElementAt(1).Text == id.ToString()) found = true; 
 
 				if (found)
 				{

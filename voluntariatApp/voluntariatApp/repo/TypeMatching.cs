@@ -112,6 +112,7 @@ namespace voluntariatApp.repo
 			{
 				resultList.Add(user.Cnp);
 				resultList.Add(user.Name);
+				resultList.Add("");
 				resultList.Add(user.Occupation.ToString());
 			}
 			else if (Entity is Organiser organiser)
