@@ -10,7 +10,6 @@ namespace voluntariatApp.service
 	internal class Context
 	{
 		private LoginEntity loginEntity;
-
 		public bool setLogin(LoginEntity loginEntity_)
 		{
 			this.loginEntity = loginEntity_;

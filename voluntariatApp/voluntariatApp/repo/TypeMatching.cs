@@ -15,27 +15,27 @@ namespace voluntariatApp.repo
 		{
 			if (type == typeof(User))
 			{
-				return "User";
+				return "users";
 			}
 			else if (type == typeof(Organiser))
 			{
-				return "Organizator";
+				return "organizatori";
 			}
 			else if (type == typeof(LoginEntity))
 			{
-				return "Logins";
+				return "logins";
 			}
 			else if (type == typeof(Event))
 			{
-				return "Eveniment";
+				return "events";
 			}
 			else if (type == typeof(EventSignup))
 			{
-				return "Inscriere";
+				return "signups";
 			}
 			else if (type == typeof(Participation))
 			{
-				return "Participare";
+				return "participations";
 			}
 			else throw new ArgumentException("Invalid entity type " + type.Name);
 		}
@@ -47,7 +47,7 @@ namespace voluntariatApp.repo
 				return new User(
 					parameters[0],
 					parameters[1],
-					(Occupation)Enum.Parse(typeof(Occupation), parameters[3])
+					(Occupation)Enum.Parse(typeof(Occupation), parameters[2])
 				) as E;
 			}
 			else if (type == typeof(Organiser))
@@ -104,63 +104,84 @@ namespace voluntariatApp.repo
 			else throw new ArgumentException("Invalid entity type " + type.Name);
 		}
 
-		public static List<string> createListFromEntity (E Entity)
+		public static string createListFromEntity (E Entity)
 		{
-			var resultList = new List<string>();
+			//Change this function to return a string like: "cnp, name, occupation" -> like this: "(1, 'Alex Zdroba', 'Student')
+			var resultList = $"(";
 
 			if (Entity is User user)
 			{
-				resultList.Add(user.Cnp);
-				resultList.Add(user.Name);
-				resultList.Add("");
-				resultList.Add(user.Occupation.ToString());
+				resultList += $"\'{user.Cnp}\', ";
+				resultList += $"\'{user.Name}\', ";
+				resultList += $"\'{user.Occupation.ToString()}\')";
 			}
 			else if (Entity is Organiser organiser)
 			{
-				resultList.Add(organiser.Cui);
-				resultList.Add(organiser.Name);
-				resultList.Add(organiser.Field.ToString());
-				resultList.Add(organiser.Description);
+				resultList += $"\'{organiser.Cui}\', ";
+				resultList += $"\'{organiser.Name}\', ";
+				resultList += $"\'{organiser.Field.ToString()}\', ";
+				resultList += $"\'{organiser.Description}\')";
 			}
 			else if (Entity is LoginEntity loginEntity)
 			{
-				resultList.Add(loginEntity.getId());
-				resultList.Add(loginEntity.Username);
-				resultList.Add(loginEntity.Password);
-				resultList.Add(loginEntity.PhoneNumber);
-				resultList.Add(loginEntity.Email);
+				resultList += $"{loginEntity.getId()}, ";
+				resultList += $"\'{loginEntity.Username}\', ";
+				resultList += $"\'{loginEntity.Password}\', ";
+				resultList += $"\'{loginEntity.PhoneNumber}\', ";
+				resultList += $"\'{loginEntity.Email}\')";
 			}
 			else if (Entity is Event eventEntity)
 			{
-				resultList.Add(eventEntity.getId().ToString());
-				resultList.Add(eventEntity.Name);
-				resultList.Add(eventEntity.CuiOrganiser);
-				resultList.Add(eventEntity.NumberOfParticipants.ToString());
-				resultList.Add(eventEntity.Location.ToString());
-				resultList.Add(eventEntity.Period.StartDate.ToString("yyyy-MM-dd"));
-				resultList.Add(eventEntity.Period.EndDate.ToString("yyyy-MM-dd"));
-				resultList.Add(eventEntity.ParticipationRequirements);
-				resultList.Add(eventEntity.EventDescription);
+				resultList += $"{eventEntity.getId()}, ";
+				resultList += $"\'{eventEntity.Name}\', ";
+				resultList += $"\'{eventEntity.CuiOrganiser}\', ";
+				resultList += $"{eventEntity.NumberOfParticipants}, ";
+				resultList += $"\'{eventEntity.Location.ToString()}\', ";
+				resultList += $"\'{eventEntity.Period.StartDate.ToString("yyyy-MM-dd:HH-mm")}\', ";
+				resultList += $"\'{eventEntity.Period.EndDate.ToString("yyyy-MM-dd:HH-mm")}\', ";
+				resultList += $"\'{eventEntity.ParticipationRequirements}\', ";
+				resultList += $"\'{eventEntity.EventDescription}\')";
 			}
 			else if (Entity is EventSignup eventSignup)
 			{
-				resultList.Add(eventSignup.getId().Item1);
-				resultList.Add(eventSignup.getId().Item2.ToString());
-				resultList.Add(eventSignup.SignupDateTime.ToString("yyyy-MM-dd"));
-				resultList.Add(eventSignup.Accepted.ToString());
-				resultList.Add(eventSignup.Reason);
+				resultList += $"\'{eventSignup.getId().Item1}\', ";
+				resultList += $"{eventSignup.getId().Item2}, ";
+				resultList += $"\'{eventSignup.SignupDateTime.ToString("yyyy-MM-dd:HH-mm")}\', ";
+				resultList += $"\'{eventSignup.Reason}\', ";
+				resultList += $"{eventSignup.Accepted.ToString().ToUpper()})";
 			}
 			else if (Entity is Participation participation)
 			{
-				resultList.Add(participation.getId().Item1);
-				resultList.Add(participation.getId().Item2.ToString());
-				resultList.Add(participation.Present.ToString());
-				resultList.Add(participation.Feedback);
+				resultList += $"\'{participation.getId().Item1}\', ";
+				resultList += $"{participation.getId().Item2}, ";
+				resultList += $"{participation.Present.ToString().ToUpper()}, ";
+				resultList += $"\'{participation.Feedback}\')";
 			}
 			else
 				throw new ArgumentException("Invalid entity type " + Entity.GetType().Name);
 
 			return resultList;
+		}
+
+		internal static string returnIdCondition(Type type, ID id)
+		{
+			if (type == typeof(User))
+			{
+				return $"cnp = \'{id}\'";
+			}
+			else if (type == typeof(Organiser))
+			{
+				return $"cui = \'{id}\'";
+			}
+			else if (type == typeof(LoginEntity))
+			{
+				return $"id = \'{id}\'";
+			}
+			else if (type == typeof(Event))
+			{
+				return $"id = {id}";
+			}
+			else throw new ArgumentException("Invalid entity type " + type.Name);
 		}
 	}
 }

@@ -5,12 +5,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using voluntariatApp.domain;
+using voluntariatApp.repo;
 
 namespace voluntariatApp.service
 {
 	internal class Service
 	{
-		public Service() { }
+		private Repository<User, string> userRepo;
+		private Repository<Organiser, string> organiserRepo;
+		private Repository<LoginEntity, string> loginRepo;
+		private Repository<Event, long> eventRepo;
+		private Repository<Participation, Tuple<string, long>> participationRepo;
+		private Repository<EventSignup, Tuple<string, long>> signupRepo;
+
+		public Service(string connectionString) {
+			this.userRepo = new Repository<User, string>(connectionString);
+			this.organiserRepo = new Repository<Organiser, string>(connectionString);
+			this.loginRepo = new Repository<LoginEntity, string>(connectionString);
+			this.eventRepo = new Repository<Event, long>(connectionString);
+			this.participationRepo = new Repository<Participation, Tuple<string, long>>(connectionString);
+			this.signupRepo = new Repository<EventSignup, Tuple<string, long>>(connectionString);
+		}
 
 		public void addLogin()
 		{
