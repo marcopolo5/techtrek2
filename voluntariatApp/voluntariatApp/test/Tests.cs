@@ -52,17 +52,20 @@ namespace voluntariatApp.test
 			return result;
 		}
 
-		public static void TestRepositoryAddDeleteFind()
+		public static string TestRepositoryAddDeleteFind()
 		{
 			var repo = new Repository<User, string>("Host=localhost;Port=5432;Username=postgres;Password=password;Database=voluntaridb");
 			repo.Save(new User("1234", "New User", Occupation.Student));
+			repo.Find("1234").ToString();
+			repo.Delete("1234");
+			return "Done";
 		}
 
-		public static void TestAll()
+		public static string TestAll()
 		{
 			//TypeMatchingTest();
-			TestRepositoryAddDeleteFind();
 			TestRepositoryUser();
+			return TestRepositoryAddDeleteFind();
 		}
 	}
 }
