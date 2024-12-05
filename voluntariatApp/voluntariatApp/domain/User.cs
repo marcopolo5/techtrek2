@@ -24,6 +24,7 @@ namespace voluntariatApp.domain
             this.Name = name;
             this.Cnp = cnp;
             this.Occupation = occupation;
+            setId(cnp);
         }
 
         public override string ToString()

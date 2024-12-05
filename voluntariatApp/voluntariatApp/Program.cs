@@ -7,8 +7,7 @@ namespace voluntariatApp
 	{
 		static void Main()
 		{
-			Tests.TestAll();
-			var print = Tests.TestRepositoryUser();
+			var print = Tests.TestAll();
 			ApplicationConfiguration.Initialize();
 			Application.Run(new Form1(print));
 		}

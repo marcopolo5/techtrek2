@@ -48,11 +48,8 @@ namespace voluntariatApp.repo
 		
 		public E? Find(ID id)
 		{
-			Entity<ID>? result;
-			bool found = false;
 			if (id == null)
 				throw new ArgumentNullException("Id cannot be null.");
-			int rowsAffected = 0;
 			using (var connection = this.getConnection())
 			{
 				connection.Open();
@@ -66,7 +63,10 @@ namespace voluntariatApp.repo
 					{
 						if (reader.Read())
 						{
-							
+							List<string> resultlist = new List<string>();
+							for (int i = 0; i < reader.FieldCount; i++)
+								resultlist.Add(reader[i].ToString());
+							return TypeMatching<E, ID>.createEntityFromList(typeof(E), resultlist);
 						}
 					}
 				}
@@ -95,49 +95,33 @@ namespace voluntariatApp.repo
                 }
             }
             return resultList;
-        }
+        }*/
 
         public void Delete(ID id)
         {
             if (id == null)
                 throw new ArgumentNullException(nameof(id), "Id cannot be null.");
+			if (this.Find(id) == null)
+				throw new ArgumentException(id + " entity not found.");
 
-			var found = false;
-
-			for (int rowIndex = 2; rowIndex <= entityTable.Dimension.End.Row; rowIndex++)
+			using (var connection = this.getConnection())
 			{
-				var row = this.entityTable.Cells[rowIndex, 1, rowIndex, this.entityTable.Dimension.End.Column];
-
-				var rowId = row.ElementAt(1).Text;
-
+				connection.Open();
+				string query = "";
 				if (id is Tuple<string, long> tupleID)
+					query = $"DELETE FROM " + this.tableName + $" WHERE cnp = \'{tupleID.Item1}\' AND id_event = {tupleID.Item1};";
+				else query = $"DELETE FROM " + this.tableName + $" WHERE " + TypeMatching<E, ID>.returnIdCondition(typeof(E), id) + ";";
+				using (var command = new NpgsqlCommand(query, connection))
 				{
-					if (row.ElementAt(1).Text == tupleID.Item1 &&
-						row.ElementAt(2).Text == tupleID.Item2.ToString())
-					{
-						found = true;
-					}
+					if (command.ExecuteNonQuery() <= 0)
+						throw new Exception("The entity was found but couldn't be deleted.");
 				}
-				else if (row.ElementAt(1).Text == id.ToString()) found = true;
-
-
-				if (found)
-                {
-                    for (int colIndex = 1; colIndex <= row.Count(); colIndex++)
-                    {
-                        row.ElementAt(colIndex).Value = null; 
-                    }
-                    break;  
-                }
-            }
-			if (!found)
-                throw new InvalidOperationException("Row with the given ID not found.");
-			this.excelFile.Save(); 
-        }
+			}
+		}
 
         public E? Update(E entity)
 		{
 			return null;
-		}*/
+		}
 	}
 }
