@@ -1,0 +1,81 @@
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\voluntariatApp\voluntariatApp\voluntariatApp\bin\Debug\net8.0-windows\voluntariatApp.exe
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\voluntariatApp\voluntariatApp\voluntariatApp\bin\Debug\net8.0-windows\voluntariatApp.deps.json
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\voluntariatApp\voluntariatApp\voluntariatApp\bin\Debug\net8.0-windows\voluntariatApp.runtimeconfig.json
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\voluntariatApp\voluntariatApp\voluntariatApp\bin\Debug\net8.0-windows\voluntariatApp.dll
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\voluntariatApp\voluntariatApp\voluntariatApp\bin\Debug\net8.0-windows\voluntariatApp.pdb
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\voluntariatApp\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.frmLogare.resources
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\voluntariatApp\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.Properties.Resources.resources
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\voluntariatApp\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.csproj.GenerateResource.cache
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\voluntariatApp\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\voluntariatApp\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.AssemblyInfoInputs.cache
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\voluntariatApp\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.AssemblyInfo.cs
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\voluntariatApp\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.csproj.CoreCompileInputs.cache
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\voluntariatApp\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.dll
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\voluntariatApp\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\refint\voluntariatApp.dll
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\voluntariatApp\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.pdb
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\voluntariatApp\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.genruntimeconfig.cache
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\voluntariatApp\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\ref\voluntariatApp.dll
+C:\Users\androsca\OneDrive - NTT DATA EMEAL\Desktop\voluntariatApp\voluntariatApp\bin\Debug\net8.0-windows\voluntariatApp.exe
+C:\Users\androsca\OneDrive - NTT DATA EMEAL\Desktop\voluntariatApp\voluntariatApp\bin\Debug\net8.0-windows\voluntariatApp.deps.json
+C:\Users\androsca\OneDrive - NTT DATA EMEAL\Desktop\voluntariatApp\voluntariatApp\bin\Debug\net8.0-windows\voluntariatApp.runtimeconfig.json
+C:\Users\androsca\OneDrive - NTT DATA EMEAL\Desktop\voluntariatApp\voluntariatApp\bin\Debug\net8.0-windows\voluntariatApp.dll
+C:\Users\androsca\OneDrive - NTT DATA EMEAL\Desktop\voluntariatApp\voluntariatApp\bin\Debug\net8.0-windows\voluntariatApp.pdb
+C:\Users\androsca\OneDrive - NTT DATA EMEAL\Desktop\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.frmLogare.resources
+C:\Users\androsca\OneDrive - NTT DATA EMEAL\Desktop\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.Properties.Resources.resources
+C:\Users\androsca\OneDrive - NTT DATA EMEAL\Desktop\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.csproj.GenerateResource.cache
+C:\Users\androsca\OneDrive - NTT DATA EMEAL\Desktop\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\androsca\OneDrive - NTT DATA EMEAL\Desktop\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.AssemblyInfoInputs.cache
+C:\Users\androsca\OneDrive - NTT DATA EMEAL\Desktop\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.AssemblyInfo.cs
+C:\Users\androsca\OneDrive - NTT DATA EMEAL\Desktop\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.csproj.CoreCompileInputs.cache
+C:\Users\androsca\OneDrive - NTT DATA EMEAL\Desktop\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.dll
+C:\Users\androsca\OneDrive - NTT DATA EMEAL\Desktop\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\refint\voluntariatApp.dll
+C:\Users\androsca\OneDrive - NTT DATA EMEAL\Desktop\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.pdb
+C:\Users\androsca\OneDrive - NTT DATA EMEAL\Desktop\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.genruntimeconfig.cache
+C:\Users\androsca\OneDrive - NTT DATA EMEAL\Desktop\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\ref\voluntariatApp.dll
+C:\Users\androsca\OneDrive - NTT DATA EMEAL\Desktop\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.SignUp1.resources
+C:\Users\androsca\OneDrive - NTT DATA EMEAL\Desktop\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.SignUpOrganizator.resources
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\v2-voluntariatApp\voluntariatApp\bin\Debug\net8.0-windows\voluntariatApp.exe
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\v2-voluntariatApp\voluntariatApp\bin\Debug\net8.0-windows\voluntariatApp.deps.json
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\v2-voluntariatApp\voluntariatApp\bin\Debug\net8.0-windows\voluntariatApp.runtimeconfig.json
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\v2-voluntariatApp\voluntariatApp\bin\Debug\net8.0-windows\voluntariatApp.dll
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\v2-voluntariatApp\voluntariatApp\bin\Debug\net8.0-windows\voluntariatApp.pdb
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\v2-voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.Properties.Resources.resources
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\v2-voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.csproj.GenerateResource.cache
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\v2-voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\v2-voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.AssemblyInfoInputs.cache
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\v2-voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.AssemblyInfo.cs
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\v2-voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.csproj.CoreCompileInputs.cache
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\v2-voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.dll
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\v2-voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\refint\voluntariatApp.dll
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\v2-voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.pdb
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\v2-voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.genruntimeconfig.cache
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\v2-voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\ref\voluntariatApp.dll
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\v2-voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.frmDashboard.resources
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\v2-voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.frmLogin.resources
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\v2-voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.frmSignUp.resources
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\v2-voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.frmSignUpOrganizator.resources
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.frmCertificates.resources
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.frmCompanySearch.resources
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.frmEvents.resources
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.frmLogin.resources
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.frmRegistration.resources
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.frmSignUp.resources
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.frmSignUpOrganizator.resources
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.frmTasks.resources
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.frmUserDashboard.resources
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.csproj.GenerateResource.cache
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\voluntariatApp\voluntariatApp\bin\Debug\net8.0-windows\voluntariatApp.exe
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\voluntariatApp\voluntariatApp\bin\Debug\net8.0-windows\voluntariatApp.deps.json
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\voluntariatApp\voluntariatApp\bin\Debug\net8.0-windows\voluntariatApp.runtimeconfig.json
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\voluntariatApp\voluntariatApp\bin\Debug\net8.0-windows\voluntariatApp.dll
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\voluntariatApp\voluntariatApp\bin\Debug\net8.0-windows\voluntariatApp.pdb
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.Properties.Resources.resources
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.AssemblyInfoInputs.cache
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.AssemblyInfo.cs
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.csproj.CoreCompileInputs.cache
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.dll
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\refint\voluntariatApp.dll
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.pdb
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\voluntariatApp.genruntimeconfig.cache
+C:\Users\ECIRESD20\OneDrive - NTT DATA EMEAL\Documentos\TechTreck - NTT-2023-2024\Csharp\Proiecte-Echipă\voluntariatApp\voluntariatApp\obj\Debug\net8.0-windows\ref\voluntariatApp.dll
