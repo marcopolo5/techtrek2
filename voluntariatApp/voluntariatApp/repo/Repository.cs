@@ -29,7 +29,7 @@ namespace voluntariatApp.repo
 			if ( Entity == null)
 				throw new ArgumentNullException("Entity cannot be null.");
 			if (this.Find(Entity.getId()) != null)
-				return null;
+				throw new ArgumentNullException("Entity with id " + Entity.getId().ToString() + " already exists.");
 
 			int rowsAffected = 0;
 			using (var connection = this.getConnection())
