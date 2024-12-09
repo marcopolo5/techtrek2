@@ -55,9 +55,22 @@ namespace voluntariatApp.test
 		public static string TestRepositoryAddDeleteFind()
 		{
 			var repo = new Repository<User, string>("Host=localhost;Port=5432;Username=postgres;Password=password;Database=voluntaridb");
-			repo.Save(new User("1234", "New User", Occupation.Student));
-			repo.Find("1234").ToString();
+			var user = new User("1234", "New User", Occupation.Student);
+			repo.Save(user);
+			Debug.Assert(repo.Find("1234").Name == user.Name, "incorrect name");
+			Debug.Assert(repo.Find("1234").Occupation == user.Occupation, "incorrect cnp");
 			repo.Delete("1234");
+			Debug.Assert(repo.Find("1234") == null, "the user was not deleted.");
+
+			var repoOrganiser = new Repository<Organiser, string>("Host=localhost;Port=5432;Username=postgres;Password=password;Database=voluntaridb");
+			var organiser = new Organiser("1234", "New Organiser", OrganiserType.Social, "desc");
+			repoOrganiser.Save(organiser);
+			Debug.Assert(repoOrganiser.Find("1234").Name == organiser.Name, "incorrect name");
+			Debug.Assert(repoOrganiser.Find("1234").Field == organiser.Field, "incorrect field");
+			Debug.Assert(repoOrganiser.Find("1234").Cui == organiser.Cui, "incorrect cui");
+			repoOrganiser.Delete("1234");
+			Debug.Assert(repoOrganiser.Find("1234") == null, "the organiser was not deleted.");
+
 			return "Done";
 		}
 
