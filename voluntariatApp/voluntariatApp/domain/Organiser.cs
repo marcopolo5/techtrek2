@@ -22,6 +22,7 @@ namespace voluntariatApp.domain
             this.Name = name;
             this.Field = field;
             this.Description = description;
+            this.setId(cui);
         }
 
         public Organiser(string cui, string name, OrganiserType field, string description)
@@ -31,7 +32,8 @@ namespace voluntariatApp.domain
             this.Name= name;
             this.Field = field;
             this.Description = description;
-        }
+			this.setId(cui);
+		}
 
 	}
 }
