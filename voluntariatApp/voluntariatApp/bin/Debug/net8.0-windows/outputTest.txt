@@ -1,5 +1,0 @@
-User: George Mihai, Occupation: StudentUser: Pop Valentin, Occupation: PensionarUser: Ramona Pop, Occupation: ElevUser: Alex Ghita, Occupation: AngajatUser: Maria Vladislav, Occupation: StudentUser: George Mihai, Occupation: Student
-User: Pop Valentin, Occupation: Pensionar
-User: Ramona Pop, Occupation: Elev
-User: Alex Ghita, Occupation: Angajat
-User: Maria Vladislav, Occupation: Student
