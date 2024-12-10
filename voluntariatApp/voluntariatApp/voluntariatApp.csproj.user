@@ -1,34 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="ui2\AdaugaAnunt.cs">
+    <Compile Update="ui\AdaugaAnunt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ui2\Adeverinte.cs">
+    <Compile Update="ui\Adeverinte.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ui2\CautareUseri.cs">
+    <Compile Update="ui\CautareUseri.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ui2\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="ui2\Inscrieri.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="ui2\Menu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="ui2\Menu2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="ui2\SignUp1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="ui2\SignUpVoluntar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="ui2\SignUpVoluntar2.cs">
+    <Compile Update="ui\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ui\frmCertificates.cs">
@@ -56,6 +38,24 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ui\frmUserDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ui\Inscrieri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ui\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ui\Menu2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ui\SignUp1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ui\SignUpVoluntar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ui\SignUpVoluntar2.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

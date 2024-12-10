@@ -22,14 +22,14 @@ namespace voluntariatApp.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources2 {
+    internal class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources2() {
+        internal Resources() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace voluntariatApp.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("voluntariatApp.Properties.Resources", typeof(Resources2).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("voluntariatApp.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -222,6 +222,88 @@ namespace voluntariatApp.Properties {
             }
         }
 
+		/// <summary>
+		///   Looks up a localized resource of type System.Drawing.Bitmap.
+		/// </summary>
+		internal static System.Drawing.Bitmap image__1_
+		{
+			get
+			{
+				object obj = ResourceManager.GetObject("image (1)", resourceCulture);
+				return ((System.Drawing.Bitmap)(obj));
+			}
+		}
 
-    }
+		/// <summary>
+		///   Looks up a localized resource of type System.Drawing.Bitmap.
+		/// </summary>
+		internal static System.Drawing.Bitmap image__2_
+		{
+			get
+			{
+				object obj = ResourceManager.GetObject("image (2)", resourceCulture);
+				return ((System.Drawing.Bitmap)(obj));
+			}
+		}
+
+		/// <summary>
+		///   Looks up a localized resource of type System.Drawing.Bitmap.
+		/// </summary>
+		internal static System.Drawing.Bitmap image__3_
+		{
+			get
+			{
+				object obj = ResourceManager.GetObject("image (3)", resourceCulture);
+				return ((System.Drawing.Bitmap)(obj));
+			}
+		}
+
+		/// <summary>
+		///   Looks up a localized resource of type System.Drawing.Bitmap.
+		/// </summary>
+		internal static System.Drawing.Bitmap image__4_
+		{
+			get
+			{
+				object obj = ResourceManager.GetObject("image (4)", resourceCulture);
+				return ((System.Drawing.Bitmap)(obj));
+			}
+		}
+
+		/// <summary>
+		///   Looks up a localized resource of type System.Drawing.Bitmap.
+		/// </summary>
+		internal static System.Drawing.Bitmap image1
+		{
+			get
+			{
+				object obj = ResourceManager.GetObject("image1", resourceCulture);
+				return ((System.Drawing.Bitmap)(obj));
+			}
+		}
+
+		/// <summary>
+		///   Looks up a localized resource of type System.Drawing.Bitmap.
+		/// </summary>
+		internal static System.Drawing.Bitmap searchphoto
+		{
+			get
+			{
+				object obj = ResourceManager.GetObject("searchphoto", resourceCulture);
+				return ((System.Drawing.Bitmap)(obj));
+			}
+		}
+
+		/// <summary>
+		///   Looks up a localized resource of type System.Drawing.Bitmap.
+		/// </summary>
+		internal static System.Drawing.Bitmap three
+		{
+			get
+			{
+				object obj = ResourceManager.GetObject("three", resourceCulture);
+				return ((System.Drawing.Bitmap)(obj));
+			}
+		}
+	}
 }
