@@ -1,8 +1,51 @@
+<<<<<<< HEAD
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <ItemGroup>
-        <Compile Update="Form1.cs">
-            <SubType>Form</SubType>
-        </Compile>
-    </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ui\frmCertificates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ui\frmCompanySearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ui\frmEvents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ui\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ui\frmRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ui\frmSignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ui\frmSignUpOrganizator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ui\frmTasks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ui\frmUserDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+=======
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SignUp1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SignUpVoluntar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+>>>>>>> andrei
 </Project>

@@ -83,10 +83,10 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="EqswQXbClMwkQasJmdUq-33" value="Eveniment&amp;nbsp;&lt;div&gt;Entity&amp;lt;Tuple&amp;lt;string, long&amp;gt;&amp;gt;&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="EqswQXbClMwkQasJmdUq-33" value="Eveniment&amp;nbsp;&lt;div&gt;Entity&amp;lt;long&amp;gt;&amp;gt;&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="520" y="480" width="240" height="330" as="geometry" />
         </mxCell>
-        <mxCell id="EqswQXbClMwkQasJmdUq-34" value="&lt;div&gt;- nume : string&lt;/div&gt;&lt;div&gt;- nrParticipanti : int&lt;/div&gt;&lt;div&gt;- locatie : Locatie&lt;/div&gt;&lt;div&gt;- interval: Tuple&amp;lt;DateTime, DateTIme.&lt;/div&gt;&lt;div&gt;- conditiiParticipare : string&lt;/div&gt;&lt;div&gt;- despreEveniment : string&lt;/div&gt;&lt;div&gt;- inscrieri: List&amp;lt;Inscriere&amp;gt;&lt;/div&gt;&lt;div&gt;- participari: List&amp;lt;Participare&amp;gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="EqswQXbClMwkQasJmdUq-33" vertex="1">
+        <mxCell id="EqswQXbClMwkQasJmdUq-34" value="&lt;div&gt;- nume : string&lt;/div&gt;&lt;div&gt;- cuiOrganizator : string&lt;/div&gt;&lt;div&gt;- nrParticipanti : int&lt;/div&gt;&lt;div&gt;- locatie : string&lt;/div&gt;&lt;div&gt;- interval: Tuple&amp;lt;DateTime, DateTIme.&lt;/div&gt;&lt;div&gt;- conditiiParticipare : string&lt;/div&gt;&lt;div&gt;- despreEveniment : string&lt;/div&gt;&lt;div&gt;- inscrieri: List&amp;lt;Inscriere&amp;gt;&lt;/div&gt;&lt;div&gt;- participari: List&amp;lt;Participare&amp;gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="EqswQXbClMwkQasJmdUq-33" vertex="1">
           <mxGeometry y="40" width="240" height="140" as="geometry" />
         </mxCell>
         <mxCell id="EqswQXbClMwkQasJmdUq-35" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="EqswQXbClMwkQasJmdUq-33" vertex="1">
@@ -170,7 +170,7 @@
         <mxCell id="EqswQXbClMwkQasJmdUq-68" value="+ addUser, deleteUser&lt;div&gt;+ addOrganizator, deleteOrganizator&lt;/div&gt;&lt;div&gt;+ addEveniment, deleteEveniment&lt;/div&gt;&lt;div&gt;+ addInscriereEveniment, deleteInscriereEveniment&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ login, logout&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ getUser(string) : User&lt;/div&gt;&lt;div&gt;+ getUsers() : List&amp;lt;User&amp;gt;&lt;/div&gt;&lt;div&gt;+ getOrganizator(string) : Organizator&lt;/div&gt;&lt;div&gt;+ getEveniment(Tuple&amp;lt;string, long&amp;gt;) : Eveniment&lt;/div&gt;&lt;div&gt;+ getEvenimente(long) : List&amp;lt;Eveniment&amp;gt;&lt;/div&gt;&lt;div&gt;+ getInscriere(Tuple&amp;lt;string, Tuple&amp;lt;string, long&amp;gt;&amp;gt;) : Inscriere&lt;/div&gt;&lt;div&gt;+ getInscrieri(User) : List&amp;lt;Inscriere&amp;gt;&lt;/div&gt;&lt;div&gt;+ getEvenimentePopulare: List&amp;lt;Evenimente&amp;gt;&lt;/div&gt;&lt;div&gt;+ getVoluntarulLunii: List&amp;lt;Voluntar&amp;gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="EqswQXbClMwkQasJmdUq-65" vertex="1">
           <mxGeometry y="178" width="360" height="242" as="geometry" />
         </mxCell>
-        <mxCell id="EqswQXbClMwkQasJmdUq-69" value="Inscriere&lt;div&gt;Entity&amp;lt;Map&amp;lt;string,string, long&amp;gt;&amp;gt;&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="EqswQXbClMwkQasJmdUq-69" value="Inscriere&lt;div&gt;Entity&amp;lt;Tuple&amp;lt;string, long&amp;gt;&amp;gt;&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="520" y="870" width="240" height="170" as="geometry" />
         </mxCell>
         <mxCell id="EqswQXbClMwkQasJmdUq-70" value="- dataInscriere : DateTime&lt;div&gt;- acceptat : bool&lt;/div&gt;&lt;div&gt;- motiv : string&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="EqswQXbClMwkQasJmdUq-69" vertex="1">
@@ -221,7 +221,7 @@
             <mxPoint x="280" y="1340" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="gFK5I8xSI8mtvcqqaqrm-1" value="Participare&lt;div&gt;Entity&amp;lt;Map&amp;lt;string,string, long&amp;gt;&amp;gt;&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="gFK5I8xSI8mtvcqqaqrm-1" value="Participare&lt;div&gt;Entity&amp;lt;Tuple&amp;lt;string, long&amp;gt;&amp;gt;&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="520" y="1070" width="240" height="130" as="geometry" />
         </mxCell>
         <mxCell id="gFK5I8xSI8mtvcqqaqrm-2" value="&lt;div&gt;- prezenta: bool&lt;/div&gt;&lt;div&gt;- feedback: string&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="gFK5I8xSI8mtvcqqaqrm-1" vertex="1">
@@ -279,16 +279,6 @@
         </mxCell>
         <mxCell id="gFK5I8xSI8mtvcqqaqrm-29" value="+ getJudet: string&lt;div&gt;+ getOras: string&lt;/div&gt;&lt;div&gt;+ getStrada: string&lt;/div&gt;&lt;div&gt;+ getNumar: string&lt;/div&gt;&lt;div&gt;+ toString: string&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="gFK5I8xSI8mtvcqqaqrm-26" vertex="1">
           <mxGeometry y="132" width="140" height="92" as="geometry" />
-        </mxCell>
-        <mxCell id="gFK5I8xSI8mtvcqqaqrm-30" value="1" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;exitX=0.995;exitY=0.429;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" target="gFK5I8xSI8mtvcqqaqrm-27" edge="1">
-          <mxGeometry x="-1" y="3" relative="1" as="geometry">
-            <mxPoint x="756" y="561" as="sourcePoint" />
-            <mxPoint x="820" y="560" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="771" y="562" />
-              <mxPoint x="771" y="560" />
-            </Array>
-          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
