@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v8.0",
@@ -74,4 +75,28 @@
       "hashPath": "npgsql.9.0.1.nupkg.sha512"
     }
   }
+=======
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "voluntariatApp/1.0.0": {
+        "runtime": {
+          "voluntariatApp.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "voluntariatApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+>>>>>>> andrei
 }

@@ -9,7 +9,11 @@ namespace voluntariatApp
 		{
 			var print = Tests.TestAll();
 			ApplicationConfiguration.Initialize();
+<<<<<<< HEAD
 			Application.Run(new frmUserDashboard());
+=======
+			Application.Run(new frmLogare());
+>>>>>>> andrei
 		}
 	}
 }
