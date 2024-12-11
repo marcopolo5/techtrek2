@@ -73,31 +73,29 @@ namespace voluntariatApp.repo
 			}
 			return null;
 		}
-		/*
-        public IEnumerable<E> FindAll()
-        {
-            var resultList = new List<E>();
-
-			for (int rowIndex = 2; rowIndex <= entityTable.Dimension.End.Row; rowIndex++)
+		public IEnumerable<E> FindAll()
+		{
+			List<E> resultlist = new List<E>();
+			using (var connection = this.getConnection())
 			{
-				var row = this.entityTable.Cells[rowIndex, 1, rowIndex, this.entityTable.Dimension.End.Column];
+				connection.Open();
+				string query = $"SELECT * FROM {this.tableName};";
+				using (var command = new NpgsqlCommand(query, connection))
+				{
+					var result = command.ExecuteReader();
+					while (result.Read())
+					{
+						List<string> entityList = new List<string>();
+						for (int i = 0; i < result.FieldCount; i++)
+							entityList.Add(result[i].ToString()!);
+						resultlist.Add(TypeMatching<E, ID>.createEntityFromList(typeof(E), entityList)!);
+					}
+				}
+			}
+			return resultlist;
+		}
 
-				var rowList = row.Select(cell => cell.Text).ToList();
-
-				if (rowList.Any(cell => string.IsNullOrWhiteSpace(cell)))
-					continue;
-
-                var entity = TypeMatching<E, ID>.createEntityFromList(typeof(E), rowList);
-
-                if (entity != null)
-                {
-                    resultList.Add(entity);
-                }
-            }
-            return resultList;
-        }*/
-
-        public void Delete(ID id)
+		public void Delete(ID id)
         {
             if (id == null)
                 throw new ArgumentNullException(nameof(id), "Id cannot be null.");

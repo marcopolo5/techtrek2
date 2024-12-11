@@ -9,14 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Baza de date.xlsx" />
     <None Remove="test\outputTest.txt" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Baza de date.xlsx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="test\outputTest.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

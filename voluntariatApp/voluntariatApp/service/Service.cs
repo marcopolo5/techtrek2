@@ -11,8 +11,6 @@ using voluntariatApp.domain;
 using voluntariatApp.domain.enums;
 using voluntariatApp.repo;
 using voluntariatApp.validator;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace voluntariatApp.service
 {
@@ -46,11 +44,6 @@ namespace voluntariatApp.service
 			);
 		}
 
-		private void deleteLogin()
-		{
-
-		}
-
 		public void addUser (string cnp, string name, string occupation, string username, string password, string email, string phone)
 		{
 			if (!Validator.IsValidName(name)) throw new ArgumentException("Invalid name");
@@ -63,16 +56,9 @@ namespace voluntariatApp.service
 			);
 		}
 
-		public void deleteUser(string cnp)
-		{
-			//delete login
-			//delete every signup
-			//delete user
-		}
-
 		public User? getUser (string cnp) => this.userRepo.Find(cnp);
 
-		//public List<User> getUserList() => this.userRepo.FindAll();
+		public IEnumerable<User> getUserList() => this.userRepo.FindAll();
 
 		public void addSignup(string cnp, long idEvent, string reason)
 		{
@@ -88,10 +74,9 @@ namespace voluntariatApp.service
 
 		public void deleteSignup(string cnp, long idEvent) => this.signupRepo.Delete(Tuple.Create(cnp, idEvent));
 		
-
 		public EventSignup? getEventSignup(string cnp, long idEvent) => this.signupRepo.Find(Tuple.Create(cnp, idEvent));
 
-		//public List<EventSignup> getEventSignupList() => this.signupRepo.FindAll();
+		public IEnumerable<EventSignup> getEventSignupList() => this.signupRepo.FindAll();
 
 		public void addOrganiser(string cui, string name, string field, string description, string username, string email, string password, string phone)
 		{
@@ -103,12 +88,12 @@ namespace voluntariatApp.service
 			);
 		}
 
-		public void deleteOrganiser(string cui)
+		public void deleteUserOrganiser(string id, string password)
 		{
-			//delete every event
-			//delete every participation
-			//delete every signup
-			//delete organiser
+			//Sterge un user sau organizator. doar login-ul, user/organizator nu se va mai putea loga,
+			//dar contul inca exista
+			if (this.loginRepo.Find(id)!.Password == password)
+				this.loginRepo.Delete(id);
 		}
 
 		public Organiser? getOrganiser(string cui) => this.organiserRepo.Find(cui);
@@ -136,18 +121,29 @@ namespace voluntariatApp.service
 
 		public void deleteEvent(long id)
 		{
-			//delete every signup
+			if (this.eventRepo.Find(id)!.Period.EndDate < DateTime.UtcNow)
+				throw new ArgumentException("Nu poti sterge un eveniment deja incheiat.");
+
+			List<Tuple<string, long>> toDelete = new List<Tuple<string, long>>();
+
+			foreach (var signup in this.signupRepo.FindAll())
+				if (signup.getId().Item2 == id)
+					toDelete.Add(signup.getId());
+
+			toDelete.ForEach(x => this.signupRepo.Delete(x));
 			this.eventRepo.Delete(id);
 		}
 
 		public Event? getEvent(long id) => this.eventRepo.Find(id);
 
-		//public List<Event> getEventList() => this.eventRepo.FindAll();
+		public IEnumerable<Event> getEventList() => this.eventRepo.FindAll();
 
-		public List<Event> getPopularEventList()
-		{
-			return null!;
-		}
+		public List<Event> getPopularEventList() =>
+			this.eventRepo.FindAll()
+				.Where(e => e.NumberOfParticipants -
+					this.signupRepo.FindAll().Count(s => s.getId().Item2 == e.getId())
+					< e.NumberOfParticipants / 10)
+				.ToList();
 
 		public void addParticipation (string cnp, long id, bool present, string feedback)
 		{
@@ -159,7 +155,6 @@ namespace voluntariatApp.service
 			this.participationRepo.Save(
 				new Participation(cnp, id, present, feedback)
 			);
-
 		}
 
 		public void deleteParticipation (string cnp, long id) => this.participationRepo.Delete(Tuple.Create(cnp, id));
