@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -7,6 +8,8 @@ using System.Threading.Tasks;
 using voluntariatApp.domain;
 using voluntariatApp.domain.enums;
 using voluntariatApp.repo;
+using voluntariatApp.service;
+using User = voluntariatApp.domain.User;
 
 namespace voluntariatApp.test
 {
@@ -14,7 +17,7 @@ namespace voluntariatApp.test
 	{
 		public static void TypeMatchingTest ()
 		{
-			var userParams = new List<string> { "123", "Alex Zdroba", "10", "Angajat" };
+			var userParams = new List<string> { "123", "Alex Zdroba", "Angajat" };
 			var user = TypeMatching<User, string>.createEntityFromList(typeof(User), userParams);
 			Debug.Assert(user != null, "user is null");
 			Debug.Assert(user.Name == "Alex Zdroba", "incorrect name");
@@ -44,41 +47,28 @@ namespace voluntariatApp.test
 			//login, participation, event signup
 		}
 
-		public static string TestRepositoryUser()
+		public static void TestService()
 		{
-			var repo = new Repository<User, string>("Host=localhost;Port=5432;Username=postgres;Password=password;Database=voluntaridb");
-			string result = "";
-			
-			return result;
+			var service = new Service("Host=localhost;Port=5432;Username=postgres;Password=password;Database=voluntaridb");
+			service.addUser("5041110125000", "User", "Student", "usernouadaugat", "Parola123!", "user@gmail.com", "12345678910");
+			var user = service.getUser("5041110125000");
+			Debug.Assert(user!.Name == "User");
+			Debug.Assert(user!.Occupation == Occupation.Student);
+			var loginuser = service.getLogin(user.getId());
+			Debug.Assert(loginuser!.Username == "usernouadaugat");
+			Debug.Assert(loginuser!.Password == "Parola123!");
+
+			service.deleteUserOrganiser(user.getId(), loginuser.Password);
+			Debug.Assert(service.getUser("5041110125000") != null);
+			Debug.Assert(service.getLogin("5041110125000") == null);
+			service.userRepo.Delete("5041110125000");
 		}
 
-		public static string TestRepositoryAddDeleteFind()
+
+		public static void TestAll()
 		{
-			var repo = new Repository<User, string>("Host=localhost;Port=5432;Username=postgres;Password=password;Database=voluntaridb");
-			var user = new User("1234", "New User", Occupation.Student);
-			repo.Save(user);
-			Debug.Assert(repo.Find("1234").Name == user.Name, "incorrect name");
-			Debug.Assert(repo.Find("1234").Occupation == user.Occupation, "incorrect cnp");
-			repo.Delete("1234");
-			Debug.Assert(repo.Find("1234") == null, "the user was not deleted.");
-
-			var repoOrganiser = new Repository<Organiser, string>("Host=localhost;Port=5432;Username=postgres;Password=password;Database=voluntaridb");
-			var organiser = new Organiser("1234", "New Organiser", OrganiserType.Social, "desc");
-			repoOrganiser.Save(organiser);
-			Debug.Assert(repoOrganiser.Find("1234").Name == organiser.Name, "incorrect name");
-			Debug.Assert(repoOrganiser.Find("1234").Field == organiser.Field, "incorrect field");
-			Debug.Assert(repoOrganiser.Find("1234").Cui == organiser.Cui, "incorrect cui");
-			repoOrganiser.Delete("1234");
-			Debug.Assert(repoOrganiser.Find("1234") == null, "the organiser was not deleted.");
-
-			return "Done";
-		}
-
-		public static string TestAll()
-		{
-			//TypeMatchingTest();
-			TestRepositoryUser();
-			return TestRepositoryAddDeleteFind();
+			TypeMatchingTest();
+			TestService();
 		}
 	}
 }

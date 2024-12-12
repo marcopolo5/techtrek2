@@ -7,7 +7,7 @@ namespace voluntariatApp
 	{
 		static void Main()
 		{
-			var print = Tests.TestAll();
+			Tests.TestAll();
 			ApplicationConfiguration.Initialize();
 			//Application.Run(new frmUserDashboard());
 			Application.Run(new frmLogare());

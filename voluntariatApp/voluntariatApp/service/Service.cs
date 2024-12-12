@@ -16,7 +16,7 @@ namespace voluntariatApp.service
 {
 	internal class Service
 	{
-		private Repository<User, string> userRepo;
+		public Repository<User, string> userRepo;
 		private Repository<Organiser, string> organiserRepo;
 		private Repository<LoginEntity, string> loginRepo;
 		private Repository<Event, long> eventRepo;
@@ -43,6 +43,8 @@ namespace voluntariatApp.service
 				new LoginEntity(id, username, password, email, phone)
 			);
 		}
+
+		public LoginEntity? getLogin(string id) => this.loginRepo.Find(id);
 
 		public void addUser (string cnp, string name, string occupation, string username, string password, string email, string phone)
 		{
