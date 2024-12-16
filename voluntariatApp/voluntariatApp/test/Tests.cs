@@ -50,7 +50,7 @@ namespace voluntariatApp.test
 		public static void TestService()
 		{
 			//var service = new Service("Host=localhost;Port=5432;Username=postgres;Password=password;Database=voluntaridb");
-			var service = new Service("postgresql://Voluntariat_owner:YV2LJcNsgd3u@ep-soft-darkness-a9t94gzc.gwc.azure.neon.tech/Voluntariat?sslmode=require");
+			var service = new Service("Host=ep-soft-darkness-a9t94gzc.gwc.azure.neon.tech;Database=Voluntariat;Username=Voluntariat_owner;Password=YV2LJcNsgd3u;SSL Mode=Require;Trust Server Certificate=true");
 			service.addUser("5041110125000", "User", "Student", "usernouadaugat", "Parola123!", "user@gmail.com", "12345678910");
 			var user = service.getUser("5041110125000");
 			Debug.Assert(user!.Name == "User");

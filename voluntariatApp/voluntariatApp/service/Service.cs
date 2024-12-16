@@ -158,7 +158,14 @@ namespace voluntariatApp.service
 				new Participation(cnp, id, present, feedback)
 			);
 		}
-
 		public void deleteParticipation (string cnp, long id) => this.participationRepo.Delete(Tuple.Create(cnp, id));
+
+		public LoginEntity? login (string username, string password)
+		{
+			LoginEntity loginEntity = this.loginRepo.FindAll().First(l => l.Username == username);
+			if (loginEntity.Password == password)
+				return loginEntity;
+			return null;
+		}
 	}
 }
