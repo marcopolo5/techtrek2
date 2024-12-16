@@ -29,7 +29,7 @@ namespace voluntariatApp
         {
             Controller controller = Controller.getInstance();
 
-            controller.addData(new List<string> { txtUsername.Text, txtPassword.Text, txtPhone.Text, txtEmail.Text });
+            controller.addLogin(new List<string> { txtUsername.Text, txtPassword.Text, txtPhone.Text, txtEmail.Text });
 
             frmSignUpOrganizator signup = new frmSignUpOrganizator();
             this.Hide();
@@ -46,7 +46,7 @@ namespace voluntariatApp
 
             Controller controller = Controller.getInstance();
 
-            controller.addData(new List<string> { txtUsername.Text, txtPassword.Text, txtPhone.Text, txtEmail.Text });
+            controller.addLogin(new List<string> { txtUsername.Text, txtPassword.Text, txtPhone.Text, txtEmail.Text });
 
             frmSignUpVoluntar signUpVoluntar = new frmSignUpVoluntar();
             this.Close();

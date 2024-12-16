@@ -46,9 +46,9 @@
 			// lblWellcome
 			// 
 			lblWellcome.Font = new Font("Constantia", 25.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-			lblWellcome.Location = new Point(-1, 14);
+			lblWellcome.Location = new Point(-1, 19);
 			lblWellcome.Name = "lblWellcome";
-			lblWellcome.Size = new Size(448, 52);
+			lblWellcome.Size = new Size(512, 69);
 			lblWellcome.TabIndex = 0;
 			lblWellcome.Text = "Bine ai venit!";
 			lblWellcome.TextAlign = ContentAlignment.MiddleCenter;
@@ -57,9 +57,9 @@
 			// 
 			lblUser.AutoSize = true;
 			lblUser.Font = new Font("Constantia", 16.2F);
-			lblUser.Location = new Point(61, 197);
+			lblUser.Location = new Point(70, 263);
 			lblUser.Name = "lblUser";
-			lblUser.Size = new Size(56, 27);
+			lblUser.Size = new Size(70, 35);
 			lblUser.TabIndex = 1;
 			lblUser.Text = "User";
 			// 
@@ -67,38 +67,36 @@
 			// 
 			lblPassword.AutoSize = true;
 			lblPassword.Font = new Font("Constantia", 16.2F);
-			lblPassword.Location = new Point(61, 232);
+			lblPassword.Location = new Point(70, 309);
 			lblPassword.Name = "lblPassword";
-			lblPassword.Size = new Size(73, 27);
+			lblPassword.Size = new Size(91, 35);
 			lblPassword.TabIndex = 2;
 			lblPassword.Text = "Parola";
 			// 
 			// txtName
 			// 
 			txtName.Font = new Font("Constantia", 16.2F);
-			txtName.Location = new Point(237, 194);
-			txtName.Margin = new Padding(3, 2, 3, 2);
+			txtName.Location = new Point(271, 259);
 			txtName.Name = "txtName";
-			txtName.Size = new Size(143, 34);
+			txtName.Size = new Size(163, 40);
 			txtName.TabIndex = 3;
 			// 
 			// txtPassword
 			// 
 			txtPassword.Font = new Font("Constantia", 16.2F);
-			txtPassword.Location = new Point(237, 228);
-			txtPassword.Margin = new Padding(3, 2, 3, 2);
+			txtPassword.Location = new Point(271, 304);
 			txtPassword.Name = "txtPassword";
 			txtPassword.PasswordChar = '*';
-			txtPassword.Size = new Size(143, 34);
+			txtPassword.Size = new Size(163, 40);
 			txtPassword.TabIndex = 4;
 			// 
 			// likSingUp
 			// 
 			likSingUp.AutoSize = true;
 			likSingUp.Font = new Font("Constantia", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-			likSingUp.Location = new Point(164, 368);
+			likSingUp.Location = new Point(187, 491);
 			likSingUp.Name = "likSingUp";
-			likSingUp.Size = new Size(90, 19);
+			likSingUp.Size = new Size(113, 24);
 			likSingUp.TabIndex = 5;
 			likSingUp.TabStop = true;
 			likSingUp.Text = "Creare cont";
@@ -111,10 +109,9 @@
 			btnLogin.FlatAppearance.BorderSize = 5;
 			btnLogin.FlatStyle = FlatStyle.Flat;
 			btnLogin.Font = new Font("Constantia", 16.2F);
-			btnLogin.Location = new Point(237, 313);
-			btnLogin.Margin = new Padding(3, 2, 3, 2);
+			btnLogin.Location = new Point(271, 417);
 			btnLogin.Name = "btnLogin";
-			btnLogin.Size = new Size(152, 46);
+			btnLogin.Size = new Size(174, 61);
 			btnLogin.TabIndex = 6;
 			btnLogin.Text = "Logare";
 			btnLogin.UseVisualStyleBackColor = false;
@@ -127,10 +124,9 @@
 			btnExit.FlatAppearance.BorderSize = 5;
 			btnExit.FlatStyle = FlatStyle.Flat;
 			btnExit.Font = new Font("Constantia", 16.2F);
-			btnExit.Location = new Point(58, 313);
-			btnExit.Margin = new Padding(3, 2, 3, 2);
+			btnExit.Location = new Point(66, 417);
 			btnExit.Name = "btnExit";
-			btnExit.Size = new Size(152, 46);
+			btnExit.Size = new Size(174, 61);
 			btnExit.TabIndex = 7;
 			btnExit.Text = "Iesire";
 			btnExit.UseVisualStyleBackColor = false;
@@ -138,10 +134,9 @@
 			// 
 			// pictureBox1
 			// 
-			pictureBox1.Location = new Point(144, 80);
-			pictureBox1.Margin = new Padding(3, 2, 3, 2);
+			pictureBox1.Location = new Point(165, 107);
 			pictureBox1.Name = "pictureBox1";
-			pictureBox1.Size = new Size(159, 91);
+			pictureBox1.Size = new Size(182, 121);
 			pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
 			pictureBox1.TabIndex = 8;
 			pictureBox1.TabStop = false;
@@ -158,24 +153,22 @@
 			panel1.Controls.Add(txtName);
 			panel1.Controls.Add(likSingUp);
 			panel1.Controls.Add(txtPassword);
-			panel1.Location = new Point(292, 58);
-			panel1.Margin = new Padding(3, 2, 3, 2);
+			panel1.Location = new Point(334, 77);
 			panel1.Name = "panel1";
-			panel1.Size = new Size(448, 413);
+			panel1.Size = new Size(512, 550);
 			panel1.TabIndex = 13;
 			// 
 			// frmLogin
 			// 
-			AutoScaleDimensions = new SizeF(7F, 15F);
+			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
 			AutoValidate = AutoValidate.EnablePreventFocusChange;
 			BackColor = Color.White;
 			BackgroundImageLayout = ImageLayout.Stretch;
-			ClientSize = new Size(1032, 530);
+			ClientSize = new Size(1179, 707);
 			Controls.Add(panel1);
 			FormBorderStyle = FormBorderStyle.FixedToolWindow;
 			Icon = (Icon)resources.GetObject("$this.Icon");
-			Margin = new Padding(3, 2, 3, 2);
 			Name = "frmLogin";
 			StartPosition = FormStartPosition.CenterScreen;
 			Text = "Logare";

@@ -163,7 +163,7 @@ namespace voluntariatApp.service
 		public LoginEntity? login (string username, string password)
 		{
 			LoginEntity loginEntity = this.loginRepo.FindAll().First(l => l.Username == username);
-			if (loginEntity.Password == password)
+			if (loginEntity.Password == password && loginEntity != null)
 				return loginEntity;
 			return null;
 		}
