@@ -34,6 +34,9 @@
     <Compile Update="ui\frmSignUpOrganizator.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ui\frmSignUpVoluntar.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="ui\frmTasks.cs">
       <SubType>Form</SubType>
     </Compile>
