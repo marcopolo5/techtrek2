@@ -10,7 +10,7 @@ namespace voluntariatApp
 			Tests.TestAll();
 			ApplicationConfiguration.Initialize();
 			//Application.Run(new frmUserDashboard());
-			Application.Run(new frmLogare());
+			Application.Run(new frmLogin());
 		}
 	}
 }

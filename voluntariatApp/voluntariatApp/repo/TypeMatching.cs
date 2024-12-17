@@ -39,8 +39,12 @@ namespace voluntariatApp.repo
 			}
 			else throw new ArgumentException("Invalid entity type " + type.Name);
 		}
-
-		public static E? createEntityFromList (Type type, List<string> parameters)
+        public static List<string> getColumnNames(Type entityType)
+        {
+            // Assuming the entity properties match the column names
+            return entityType.GetProperties().Select(p => p.Name).ToList();
+        }
+        public static E? createEntityFromList (Type type, List<string> parameters)
 		{
 			if (type == typeof(User))
 			{
@@ -124,7 +128,7 @@ namespace voluntariatApp.repo
 			}
 			else if (Entity is LoginEntity loginEntity)
 			{
-				resultList += $"{loginEntity.getId()}, ";
+				resultList += $"\'{loginEntity.getId()}\', ";
 				resultList += $"\'{loginEntity.Username}\', ";
 				resultList += $"\'{loginEntity.Password}\', ";
 				resultList += $"\'{loginEntity.PhoneNumber}\', ";
@@ -132,7 +136,7 @@ namespace voluntariatApp.repo
 			}
 			else if (Entity is Event eventEntity)
 			{
-				resultList += $"{eventEntity.getId()}, ";
+				resultList += $"\'{eventEntity.getId()}\', ";
 				resultList += $"\'{eventEntity.Name}\', ";
 				resultList += $"\'{eventEntity.CuiOrganiser}\', ";
 				resultList += $"{eventEntity.NumberOfParticipants}, ";

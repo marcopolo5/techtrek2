@@ -164,8 +164,6 @@
             // button1
             // 
             button1.BackColor = Color.FromArgb(118, 203, 200);
-            button1.BackgroundImage = Properties.Resources.BackArrow;
-            button1.BackgroundImageLayout = ImageLayout.Stretch;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Location = new Point(12, 12);
@@ -179,8 +177,6 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.BackgroundSignUp;
-            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1180, 707);
             Controls.Add(button1);
             Controls.Add(panel1);

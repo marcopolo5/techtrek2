@@ -26,7 +26,7 @@ namespace voluntariatApp
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            frmUserDashboard dashboard = new frmUserDashboard();
+            Menu2 dashboard = new Menu2();
             this.Hide();
             dashboard.Show();
         }

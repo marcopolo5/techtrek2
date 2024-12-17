@@ -6,6 +6,7 @@ using System.Text;
 using voluntariatApp.domain;
 using Npgsql;
 using System.ComponentModel.DataAnnotations;
+using static Npgsql.Replication.PgOutput.Messages.RelationMessage;
 
 namespace voluntariatApp.repo
 {
@@ -26,25 +27,25 @@ namespace voluntariatApp.repo
 
 		public E? Save (E Entity)
 		{
-			if ( Entity == null)
-				throw new ArgumentNullException("Entity cannot be null.");
-			if (this.Find(Entity.getId()) != null)
-				throw new ArgumentNullException("Entity with id " + Entity.getId().ToString() + " already exists.");
+            if (Entity == null)
+                throw new ArgumentNullException("Entity cannot be null.");
+            if (this.Find(Entity.getId()) != null)
+                throw new ArgumentNullException("Entity with id " + Entity.getId().ToString() + " already exists.");
 
-			int rowsAffected = 0;
-			using (var connection = this.getConnection())
-			{
-				connection.Open();
-				string query = $"INSERT INTO " + this.tableName + $" VALUES " + TypeMatching<E, ID>.createListFromEntity(Entity) + ";";
-				using (var command = new NpgsqlCommand(query, connection))
-				{
-					rowsAffected = command.ExecuteNonQuery();
-				}
-			}
-			if (rowsAffected > 0) 
-				return Entity;
-			return null;
-		}
+            int rowsAffected = 0;
+            using (var connection = this.getConnection())
+            {
+                connection.Open();
+                string query = $"INSERT INTO " + this.tableName + $" VALUES " + TypeMatching<E, ID>.createListFromEntity(Entity) + ";";
+                using (var command = new NpgsqlCommand(query, connection))
+                {
+                    rowsAffected = command.ExecuteNonQuery();
+                }
+            }
+            if (rowsAffected > 0)
+                return Entity;
+            return null;
+        }
 		
 		public E? Find(ID id)
 		{
@@ -121,5 +122,33 @@ namespace voluntariatApp.repo
 		{
 			return null;
 		}
-	}
+
+        public IEnumerable<Event> FindByOrganizer(string cuiOrganiser)
+        {
+            if (string.IsNullOrEmpty(cuiOrganiser))
+                throw new ArgumentNullException("CUI cannot be null or empty.");
+
+            List<Event> events = new List<Event>();
+            using (var connection = this.getConnection())
+            {
+                connection.Open();
+                string query = $"SELECT * FROM {this.tableName} WHERE cui = @cuiOrganiser;";
+                using (var command = new NpgsqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@cuiOrganiser", cuiOrganiser);
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            List<string> resultlist = new List<string>();
+                            for (int i = 0; i < reader.FieldCount; i++)
+                                resultlist.Add(reader[i].ToString());
+                            events.Add(TypeMatching<Event, long>.createEntityFromList(typeof(Event), resultlist));
+                        }
+                    }
+                }
+            }
+            return events;
+        }
+    }
 }
