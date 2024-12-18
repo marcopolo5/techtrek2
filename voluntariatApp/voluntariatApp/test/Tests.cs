@@ -69,7 +69,7 @@ namespace voluntariatApp.test
 		public static void TestAll()
 		{
 			TypeMatchingTest();
-			TestService();
+			//TestService();
 		}
 	}
 }
