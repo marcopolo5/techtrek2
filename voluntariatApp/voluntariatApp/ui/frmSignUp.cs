@@ -36,6 +36,8 @@ namespace voluntariatApp
 
         private void btnVoluntar_Click(object sender, EventArgs e)
         {
+            Controller controller =Controller.getInstance();
+            controller.addLogin(new List<string> { txtUsername.Text, txtPassword.Text, txtPhone.Text, txtEmail.Text });
             SignUpVoluntar2 form1 = new SignUpVoluntar2();
             this.Close();
             form1.Show();
