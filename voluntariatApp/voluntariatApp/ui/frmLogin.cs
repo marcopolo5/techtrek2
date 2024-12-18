@@ -1,3 +1,5 @@
+using voluntariatApp.controller;
+
 namespace voluntariatApp
 {
     public partial class frmLogin : Form
@@ -26,7 +28,14 @@ namespace voluntariatApp
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Menu2 dashboard = new Menu2();
+            if (!Controller.getInstance().login(txtName.Text, txtPassword.Text))
+            {
+                MessageBox.Show("Invalid username or password.");
+                return;
+            }
+            txtName.Clear();
+            txtPassword.Clear();
+            frmUserDashboard dashboard = new frmUserDashboard();
             this.Hide();
             dashboard.Show();
         }

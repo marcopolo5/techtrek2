@@ -1,22 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using voluntariatApp.domain;
+using voluntariatApp.service;
+using voluntariatApp.controller;
 
 namespace voluntariatApp
 {
     public partial class frmUserDashboard : Form
     {
+        // Declare labels for event details
+        private Label lblEvent;
+        private Label lblData;
+        private Label lblLocatie;
+        private Label lblDispNo;
+        private Label lblDescription;
+
         public frmUserDashboard()
         {
             InitializeComponent();
         }
-
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
@@ -35,12 +45,184 @@ namespace voluntariatApp
         private void btnDetalii1_Click(object sender, EventArgs e)
         {
             panelEventDetails.Visible = true;
+
+            Controller controller = Controller.getInstance();
+            var lista = controller.topEvens();
+
+            string result = string.Join(", ", lista);
+            MessageBox.Show(result);
         }
 
         private void frmUserDashboard_Load(object sender, EventArgs e)
         {
             panelEventDetails.Visible = false;
             panelEventRegistration.Visible = false;
+
+            try
+            {
+            var controller = Controller.getInstance();
+            var popularEvents = controller.topEvens();
+
+            // Populate events into FlowLayoutPanel
+            LoadEventsIntoFlowLayout(popularEvents);
+
+            // Initialize the event details panel
+            InitializeEventDetailsPanel();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Failed to load events: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void LoadEventsIntoFlowLayout(List<Event> events)
+        {
+            flowLayoutPanel1.Controls.Clear();
+            int index = 1; // Initialize index to select the correct image
+
+            foreach (var ev in events)
+            {
+                Panel eventCard = CreateEventCard(ev, index);
+                flowLayoutPanel1.Controls.Add(eventCard);
+                index++; // Increment index for each event
+            }
+        }
+
+        private Panel CreateEventCard(Event ev, int index)
+        {
+            // Create a container panel for the event card
+            Panel eventCard = new Panel
+            {
+                BorderStyle = BorderStyle.FixedSingle,
+                Size = new Size(500, 150),
+                Margin = new Padding(10)
+            };
+
+            // PictureBox for event image
+            PictureBox picture = new PictureBox
+            {
+                BorderStyle = BorderStyle.FixedSingle,
+                Size = new Size(120, 120),
+                Location = new Point(10, 10),
+                SizeMode = PictureBoxSizeMode.StretchImage // Adjust image size to fit
+            };
+
+            // Assign an image based on the index (you can adjust this logic)
+            // picture.Image = Image.FromFile($"event_image_{index}.jpg");
+
+            eventCard.Controls.Add(picture);
+
+            // Etichete pentru detalii
+            Label lblEventName = CreateLabel($"{ev.Name}", 10, FontStyle.Regular, new Point(140, 10));
+            Label lblDate = CreateLabel($"{ev.Period.StartDate:dd/MM/yyyy} - {ev.Period.EndDate:dd/MM/yyyy}", 10, FontStyle.Regular, new Point(140, 35));
+            Label lblAvailableSeats = CreateLabel($"{ev.NumberOfParticipants}", 10, FontStyle.Regular, new Point(380, 10));
+            Label lblLocation = CreateLabel($"{ev.Location}", 10, FontStyle.Regular, new Point(370, 35));
+
+            // Add labels to event card
+            eventCard.Controls.Add(lblEventName);
+            eventCard.Controls.Add(lblDate);
+            eventCard.Controls.Add(lblAvailableSeats);
+            eventCard.Controls.Add(lblLocation);
+
+            // Button for viewing event details
+            Button btnDetails = new Button
+            {
+                Text = "Details",
+                Size = new Size(70, 25),
+                Location = new Point(400, 100),
+                BackColor = Color.LightSeaGreen,
+                ForeColor = Color.White
+            };
+
+            btnDetails.Click += (s, e) =>
+            {
+                panelEventDetails.Visible = true;
+
+                // Display event details in the right panel
+                lblEvent.Text = ev.Name;
+                lblData.Text = $"{ev.Period.StartDate:dd/MM/yyyy} - {ev.Period.EndDate:dd/MM/yyyy}";
+                lblLocatie.Text = ev.Location.ToString();
+                lblDispNo.Text = $"{ev.NumberOfParticipants} available seats";
+                lblDescription.Text = ev.EventDescription ?? "No description available.";
+            };
+
+            eventCard.Controls.Add(btnDetails);
+
+            return eventCard;
+        }
+
+        // Initialize the event details panel with labels
+        private void InitializeEventDetailsPanel()
+        {
+            // Calculate the center of the panel
+            int panelWidth = panelEventDetails.Width;
+
+            // Label width (approximated, you can adjust if needed)
+            int labelWidth = 300;
+
+            // Horizontal center of the panel
+            int centerX = (panelWidth - labelWidth) / 2;
+
+            // Create and position labels
+            lblEvent = new Label
+            {
+                Location = new Point(centerX, 50),
+                Font = new Font("Constantia", 12),
+                Width = labelWidth,
+                TextAlign = ContentAlignment.MiddleCenter // Center the text horizontally
+            };
+
+            lblData = new Label
+            {
+                Location = new Point(centerX, 80),
+                Font = new Font("Constantia", 10),
+                Width = labelWidth,
+                TextAlign = ContentAlignment.MiddleCenter
+            };
+
+            lblLocatie = new Label
+            {
+                Location = new Point(centerX, 110),
+                Font = new Font("Constantia", 10),
+                Width = labelWidth,
+                TextAlign = ContentAlignment.MiddleCenter
+            };
+
+            lblDispNo = new Label
+            {
+                Location = new Point(centerX, 140),
+                Font = new Font("Constantia", 10),
+                Width = labelWidth,
+                TextAlign = ContentAlignment.MiddleCenter
+            };
+
+            lblDescription = new Label
+            {
+                Location = new Point(centerX, 170),
+                Font = new Font("Constantia", 10),
+                Width = labelWidth,
+                TextAlign = ContentAlignment.MiddleCenter
+            };
+
+            // Add labels to the panel
+            panelEventDetails.Controls.Add(lblEvent);
+            panelEventDetails.Controls.Add(lblData);
+            panelEventDetails.Controls.Add(lblLocatie);
+            panelEventDetails.Controls.Add(lblDispNo);
+            panelEventDetails.Controls.Add(lblDescription);
+        }
+
+
+        // Create a label control with specific properties
+        private Label CreateLabel(string text, int fontSize, FontStyle fontStyle, Point location)
+        {
+            return new Label
+            {
+                Text = text,
+                Font = new Font("Constantia", fontSize, fontStyle),
+                AutoSize = true,
+                Location = location
+            };
         }
 
         private void btnCloseDetails_Click(object sender, EventArgs e)
@@ -90,5 +272,13 @@ namespace voluntariatApp
             certificates.Show();
             this.Hide();
         }
+
+        private void panelEventRegistration_Paint(object sender, PaintEventArgs e)
+        {
+            // You can customize painting here if needed
+        }
+
+       
+
     }
 }

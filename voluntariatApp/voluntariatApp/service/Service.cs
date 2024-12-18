@@ -145,7 +145,7 @@ namespace voluntariatApp.service
             this.eventRepo.FindAll()
                 .Where(e => e.NumberOfParticipants -
                     this.signupRepo.FindAll().Count(s => s.getId().Item2 == e.getId())
-                    < e.NumberOfParticipants / 10)
+                    <= e.NumberOfParticipants / 10)
                 .ToList();
 
         public void addParticipation(string cnp, long id, bool present, string feedback)

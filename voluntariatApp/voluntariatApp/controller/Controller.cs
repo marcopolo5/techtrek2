@@ -55,5 +55,9 @@ namespace voluntariatApp.controller
                 return false;
             }
         }
+        public List<Event> topEvens()
+        {
+            return service.getPopularEventList();
+        }
     }
 }

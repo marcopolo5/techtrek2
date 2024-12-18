@@ -68,7 +68,9 @@ namespace voluntariatApp
 
         private void button1_Click_2(object sender, EventArgs e)
         {
-
+            Adeverinte adev = new Adeverinte();
+            this.Hide();
+            adev.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)

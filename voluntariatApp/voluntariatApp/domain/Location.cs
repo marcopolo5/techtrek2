@@ -4,32 +4,47 @@ namespace voluntariatApp.domain
 {
     public class Location
     {
-		private string[] strings;
+        private string[] strings;
 
-		public string State { get; private set; }
+        //public string State { get; private set; }
         public string City { get; private set; }
-        public string StreetName { get; private set; }
-        public string StreetNumber { get; private set; }
+        //public string StreetName { get; private set; }
+        //public string StreetNumber { get; private set; }
 
-        public Location(string state, string city, string streetName, string streetNumber)
+        //      public Location(string state, string city, string streetName, string streetNumber)
+        //      {
+        //          State = state;
+        //          City = city;
+        //          StreetName = streetName;
+        //          StreetNumber = streetNumber;
+        //      }
+
+        //public Location(string[] strings)
+        //{
+        //	State = strings[0];
+        //	City = strings[1];
+        //	StreetName = strings[2];
+        //	StreetNumber = strings[3];
+        //}
+
+        //public override string ToString()
+        //      {
+        //          return $"{State};{City};{StreetName};{StreetNumber}";
+        //      }
+
+        public Location(string city)
         {
-            State = state;
             City = city;
-            StreetName = streetName;
-            StreetNumber = streetNumber;
         }
 
-		public Location(string[] strings)
-		{
-			State = strings[0];
-			City = strings[1];
-			StreetName = strings[2];
-			StreetNumber = strings[3];
-		}
-
-		public override string ToString()
+        public Location(string[] strings)
         {
-            return $"{State};{City};{StreetName};{StreetNumber}";
+            City = strings[0];
         }
-	}
+
+        public override string ToString()
+        {
+            return $"{City}";
+        }
+    }
 }

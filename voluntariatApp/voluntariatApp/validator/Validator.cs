@@ -109,18 +109,19 @@ namespace voluntariatApp.validator
             if (location == null)
                 return false;
 
-            if (string.IsNullOrWhiteSpace(location.State) ||
-                string.IsNullOrWhiteSpace(location.City) || 
-                string.IsNullOrWhiteSpace(location.StreetName) ||
-                string.IsNullOrWhiteSpace(location.StreetNumber))
+            if (//string.IsNullOrWhiteSpace(location.State) ||
+                string.IsNullOrWhiteSpace(location.City) //|| 
+                //string.IsNullOrWhiteSpace(location.StreetName) ||
+                //string.IsNullOrWhiteSpace(location.StreetNumber)
+                )
             {
                 return false;
             }
 
-            if (!location.StreetNumber.All(char.IsDigit))
-            {
-                return false;
-            }
+            //if (!location.StreetNumber.All(char.IsDigit))
+            //{
+            //    return false;
+            //}
 
             return true;
         }
