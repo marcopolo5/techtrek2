@@ -1,4 +1,5 @@
 using voluntariatApp.controller;
+using voluntariatApp.domain;
 
 namespace voluntariatApp
 {
@@ -35,9 +36,19 @@ namespace voluntariatApp
             }
             txtName.Clear();
             txtPassword.Clear();
-            frmUserDashboard dashboard = new frmUserDashboard();
-            this.Hide();
-            dashboard.Show();
+            if(Controller.getInstance().isUser()==true)
+            {
+                frmUserDashboard dashboard = new frmUserDashboard();
+                this.Hide();
+                dashboard.Show();
+            }
+            else
+            {
+                Menu2 dashboard = new Menu2();
+                this.Hide();
+                dashboard.Show();
+            }
+           
         }
     }
 }

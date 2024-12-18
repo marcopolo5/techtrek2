@@ -59,5 +59,15 @@ namespace voluntariatApp.controller
         {
             return service.getPopularEventList();
         }
+
+        public List<Event> organizationEvents()
+        {
+            return service.listaEvenimenteOrganizatie(loggedInEntity.getId());
+        }
+
+        public bool isUser()
+        {
+            return service.getUser(loggedInEntity.getId()) !=null;
+        }
     }
 }

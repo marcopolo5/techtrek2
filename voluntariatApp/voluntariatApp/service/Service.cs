@@ -168,5 +168,10 @@ namespace voluntariatApp.service
                 return loginEntity;
             return null;
         }
+
+        public List<Event> listaEvenimenteOrganizatie(string cui)
+        {
+            return this.eventRepo.FindAll().Where(e => e.CuiOrganiser == cui).ToList();
+        }
     }
 }

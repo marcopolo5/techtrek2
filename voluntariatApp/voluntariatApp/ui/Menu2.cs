@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using voluntariatApp.controller;
 
 namespace voluntariatApp
 {
@@ -167,9 +168,9 @@ namespace voluntariatApp
         }
         private void Menu2_Load(object sender, EventArgs e)
         {
-            var yourEvents = new List<string> { "Event1", "Event2", "Event3", "Event4", "Event5" };
-            //foreach (var ev in yourEvents)
-            //{
+            var yourEvents = Controller.getInstance().organizationEvents();
+            foreach (var ev in yourEvents)
+            {
                 Panel panel = new Panel();
                 panel.Size = new Size(350, 130);
                 panel.BackColor = Color.FromArgb(0, 255, 0);
@@ -180,13 +181,13 @@ namespace voluntariatApp
                 label.Size = new Size(130, 20);
                 label.BorderStyle = BorderStyle.None;
                 label.Location = new Point(107, 24);
-                label.Text = "Nume Eveniment";
+                label.Text = $"{ev.Name}";
 
                 Label label2 = new Label();
                 label2.Size = new Size(130, 20);
                 label2.BorderStyle = BorderStyle.None;
                 label2.Location = new Point(107, 60);
-                label2.Text = "Oameni Inscrisi";
+                label2.Text = $"Capacitate:{ev.NumberOfParticipants}";
 
             Label label3 = new Label();
                 label3.Size = new Size(130, 20);
@@ -231,7 +232,7 @@ namespace voluntariatApp
             panel.Controls.Add(label3);
             
             this.Controls.Add(panel);
-            //}
+            }
         }
 
         private void button3_Click_1(object sender, EventArgs e)
