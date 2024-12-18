@@ -48,13 +48,15 @@ namespace voluntariatApp.controller
             try
             {
                 this.loggedInEntity = this.service.login(username, password);
-                return true;
+                if (loggedInEntity != null)
+                    return true;
             }
             catch (Exception _)
             {
-                return false;
+                
             }
-        }
+			return false;
+		}
         public List<Event> topEvens()
         {
             return service.getPopularEventList();
