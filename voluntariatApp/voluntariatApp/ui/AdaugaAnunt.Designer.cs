@@ -30,11 +30,11 @@
         {
             button1 = new Button();
             panel1 = new Panel();
-            richTextBox1 = new RichTextBox();
+            txtDescpription = new RichTextBox();
             label2 = new Label();
-            textBox1 = new TextBox();
+            txtConditions = new TextBox();
             label1 = new Label();
-            txtPhone = new TextBox();
+            txtEndPeriod = new TextBox();
             lblTitle = new Label();
             lblLocation = new Label();
             lblPhone = new Label();
@@ -44,6 +44,8 @@
             txtLocation = new TextBox();
             lblParticipants = new Label();
             txtName = new TextBox();
+            txtStartPeriod = new TextBox();
+            label3 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -63,11 +65,13 @@
             // 
             panel1.BackColor = Color.White;
             panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(richTextBox1);
+            panel1.Controls.Add(txtStartPeriod);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(txtDescpription);
             panel1.Controls.Add(label2);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(txtConditions);
             panel1.Controls.Add(label1);
-            panel1.Controls.Add(txtPhone);
+            panel1.Controls.Add(txtEndPeriod);
             panel1.Controls.Add(lblTitle);
             panel1.Controls.Add(lblLocation);
             panel1.Controls.Add(lblPhone);
@@ -79,52 +83,52 @@
             panel1.Controls.Add(txtName);
             panel1.Location = new Point(334, 78);
             panel1.Name = "panel1";
-            panel1.Size = new Size(512, 550);
+            panel1.Size = new Size(512, 581);
             panel1.TabIndex = 15;
             panel1.Paint += panel1_Paint;
             // 
-            // richTextBox1
+            // txtDescpription
             // 
-            richTextBox1.Location = new Point(271, 365);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(163, 57);
-            richTextBox1.TabIndex = 15;
-            richTextBox1.Text = "";
+            txtDescpription.Location = new Point(271, 403);
+            txtDescpription.Name = "txtDescpription";
+            txtDescpription.Size = new Size(163, 57);
+            txtDescpription.TabIndex = 15;
+            txtDescpription.Text = "";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.White;
             label2.Font = new Font("Constantia", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(70, 369);
+            label2.Location = new Point(70, 407);
             label2.Name = "label2";
             label2.Size = new Size(100, 35);
             label2.TabIndex = 14;
             label2.Text = "Despre";
             // 
-            // textBox1
+            // txtConditions
             // 
-            textBox1.Location = new Point(271, 324);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(163, 27);
-            textBox1.TabIndex = 13;
+            txtConditions.Location = new Point(271, 362);
+            txtConditions.Name = "txtConditions";
+            txtConditions.Size = new Size(163, 27);
+            txtConditions.TabIndex = 13;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Constantia", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(70, 316);
+            label1.Location = new Point(70, 354);
             label1.Name = "label1";
             label1.Size = new Size(114, 35);
             label1.TabIndex = 12;
             label1.Text = "Conditii";
             // 
-            // txtPhone
+            // txtEndPeriod
             // 
-            txtPhone.Location = new Point(271, 277);
-            txtPhone.Name = "txtPhone";
-            txtPhone.Size = new Size(163, 27);
-            txtPhone.TabIndex = 7;
+            txtEndPeriod.Location = new Point(271, 315);
+            txtEndPeriod.Name = "txtEndPeriod";
+            txtEndPeriod.Size = new Size(163, 27);
+            txtEndPeriod.TabIndex = 7;
             // 
             // lblTitle
             // 
@@ -151,11 +155,11 @@
             lblPhone.AutoSize = true;
             lblPhone.BackColor = Color.White;
             lblPhone.Font = new Font("Constantia", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblPhone.Location = new Point(70, 270);
+            lblPhone.Location = new Point(70, 308);
             lblPhone.Name = "lblPhone";
-            lblPhone.Size = new Size(119, 35);
+            lblPhone.Size = new Size(131, 35);
             lblPhone.TabIndex = 3;
-            lblPhone.Text = "Perioada";
+            lblPhone.Text = "Data final";
             // 
             // lblName
             // 
@@ -175,7 +179,7 @@
             btnAdd.FlatAppearance.BorderSize = 5;
             btnAdd.FlatStyle = FlatStyle.Flat;
             btnAdd.Font = new Font("Constantia", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnAdd.Location = new Point(162, 449);
+            btnAdd.Location = new Point(164, 487);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(174, 61);
             btnAdd.TabIndex = 8;
@@ -216,6 +220,24 @@
             txtName.Size = new Size(163, 27);
             txtName.TabIndex = 4;
             // 
+            // txtStartPeriod
+            // 
+            txtStartPeriod.Location = new Point(271, 271);
+            txtStartPeriod.Name = "txtStartPeriod";
+            txtStartPeriod.Size = new Size(163, 27);
+            txtStartPeriod.TabIndex = 17;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.White;
+            label3.Font = new Font("Constantia", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(70, 264);
+            label3.Name = "label3";
+            label3.Size = new Size(169, 35);
+            label3.TabIndex = 16;
+            label3.Text = "Data inceput";
+            // 
             // AdaugaAnunt
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -235,7 +257,7 @@
 
         private Button button1;
         private Panel panel1;
-        private TextBox txtPhone;
+        private TextBox txtEndPeriod;
         private Label lblTitle;
         private Label lblLocation;
         private Label lblPhone;
@@ -245,9 +267,11 @@
         private TextBox txtLocation;
         private Label lblParticipants;
         private TextBox txtName;
-        private RichTextBox richTextBox1;
+        private RichTextBox txtDescpription;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox txtConditions;
         private Label label1;
+        private TextBox txtStartPeriod;
+        private Label label3;
     }
 }

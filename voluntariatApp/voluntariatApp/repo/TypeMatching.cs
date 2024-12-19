@@ -137,8 +137,8 @@ namespace voluntariatApp.repo
                 resultList += $"\'{eventEntity.CuiOrganiser}\', ";
                 resultList += $"{eventEntity.NumberOfParticipants}, ";
                 resultList += $"\'{eventEntity.Location.ToString()}\', ";
-                resultList += $"\'{eventEntity.Period.StartDate.ToString("yyyy-MM-dd:HH-mm")}\', ";
-                resultList += $"\'{eventEntity.Period.EndDate.ToString("yyyy-MM-dd:HH-mm")}\', ";
+                resultList += $"\'{eventEntity.Period.StartDate.ToString("yyyy-MM-dd HH:mm:ss")}\', ";
+                resultList += $"\'{eventEntity.Period.EndDate.ToString("yyyy-MM-dd HH:mm:ss")}\', ";
                 resultList += $"\'{eventEntity.ParticipationRequirements}\', ";
                 resultList += $"\'{eventEntity.EventDescription}\')";
             }

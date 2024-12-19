@@ -117,7 +117,7 @@ namespace voluntariatApp.service
                 throw new ArgumentException("Invalid description.");
 
             this.eventRepo.Save(
-                new Event(idEvent, name, cui, numberOfParticipants, location, eventPeriod, requirements, description)
+                new Event(13, name, cui, numberOfParticipants, location, eventPeriod, requirements, description)
             );
 
         }

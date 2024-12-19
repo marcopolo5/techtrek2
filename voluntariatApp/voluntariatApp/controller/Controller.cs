@@ -67,7 +67,36 @@ namespace voluntariatApp.controller
 
         public bool isUser()
         {
-            return service.getUser(loggedInEntity.getId()) !=null;
+            if (loggedInEntity != null)
+            {
+                return service.getUser(loggedInEntity.getId()) != null;
+            }
+            else
+            {
+                MessageBox.Show("date invalide");
+                return false;
+            }
+
+        }
+        public void addEvent(List<string> param)
+        {
+
+            DateTime dateTime = DateTime.ParseExact(param[3], "MM/dd/yyyy", null);
+            dateTime = new DateTime(dateTime.Year, dateTime.Month, dateTime.Day, 0, 0, 0);
+
+            DateTime dateTime2 = DateTime.ParseExact(param[4], "MM/dd/yyyy", null);
+            dateTime2 = new DateTime(dateTime.Year, dateTime.Month, dateTime.Day, 0, 0, 0);
+            service.addEvent(14,loggedInEntity.getId(),param[0], int.Parse(param[1]), new Location(param[2]),new EventPeriod(dateTime, dateTime2), param[5], param[6]);
+        }
+        public void deleteEvent(long id)
+        {
+            try
+            {
+                service.deleteEvent(id);
+            }
+            catch (Exception _)
+            {
+            }
         }
     }
 }

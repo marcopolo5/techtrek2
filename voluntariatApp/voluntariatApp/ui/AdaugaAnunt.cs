@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using voluntariatApp.controller;
 
 namespace voluntariatApp
 {
@@ -31,6 +32,8 @@ namespace voluntariatApp
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            // Add anunt
+            Controller.getInstance().addEvent(new List<string> { txtName.Text, txtParticipants.Text, txtLocation.Text,txtStartPeriod.Text,txtEndPeriod.Text, txtConditions.Text, txtDescpription.Text });
             Menu2 dashboard = new Menu2();
             this.Hide();
             dashboard.Show();

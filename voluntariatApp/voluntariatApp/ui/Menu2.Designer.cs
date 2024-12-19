@@ -52,24 +52,6 @@
             pictureBox6 = new PictureBox();
             button7 = new Button();
             panel5 = new Panel();
-            panel3 = new Panel();
-            label8 = new Label();
-            label9 = new Label();
-            button10 = new Button();
-            button12 = new Button();
-            button13 = new Button();
-            label10 = new Label();
-            label11 = new Label();
-            pictureBox7 = new PictureBox();
-            panel4 = new Panel();
-            label12 = new Label();
-            label13 = new Label();
-            button14 = new Button();
-            button15 = new Button();
-            button16 = new Button();
-            label14 = new Label();
-            label15 = new Label();
-            pictureBox8 = new PictureBox();
             label7 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -79,10 +61,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
-            panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
-            panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -368,196 +346,6 @@
             panel5.Size = new Size(570, 599);
             panel5.TabIndex = 8;
             // 
-            // panel3
-            // 
-            panel3.BackColor = Color.White;
-            panel3.Controls.Add(label8);
-            panel3.Controls.Add(label9);
-            panel3.Controls.Add(button10);
-            panel3.Controls.Add(button12);
-            panel3.Controls.Add(button13);
-            panel3.Controls.Add(label10);
-            panel3.Controls.Add(label11);
-            panel3.Controls.Add(pictureBox7);
-            panel3.Location = new Point(200, 235);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(357, 129);
-            panel3.TabIndex = 9;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(39, 13);
-            label8.Name = "label8";
-            label8.Size = new Size(42, 20);
-            label8.TabIndex = 9;
-            label8.Text = "Activ";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Location = new Point(107, 95);
-            label9.Name = "label9";
-            label9.Size = new Size(131, 20);
-            label9.TabIndex = 9;
-            label9.Text = "Interval Eveniment";
-            // 
-            // button10
-            // 
-            button10.BackColor = Color.White;
-            button10.FlatStyle = FlatStyle.Flat;
-            button10.Location = new Point(257, 15);
-            button10.Name = "button10";
-            button10.Size = new Size(79, 29);
-            button10.TabIndex = 7;
-            button10.Text = "Preview";
-            button10.UseVisualStyleBackColor = false;
-            // 
-            // button12
-            // 
-            button12.BackColor = Color.White;
-            button12.FlatStyle = FlatStyle.Flat;
-            button12.Location = new Point(257, 51);
-            button12.Name = "button12";
-            button12.Size = new Size(79, 29);
-            button12.TabIndex = 6;
-            button12.Text = "Editeaza";
-            button12.UseVisualStyleBackColor = false;
-            // 
-            // button13
-            // 
-            button13.BackColor = Color.White;
-            button13.FlatStyle = FlatStyle.Flat;
-            button13.Location = new Point(257, 85);
-            button13.Name = "button13";
-            button13.Size = new Size(79, 29);
-            button13.TabIndex = 5;
-            button13.Text = "Sterge";
-            button13.UseVisualStyleBackColor = false;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Location = new Point(107, 59);
-            label10.Name = "label10";
-            label10.Size = new Size(109, 20);
-            label10.TabIndex = 3;
-            label10.Text = "Oameni Inscrisi";
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Location = new Point(107, 24);
-            label11.Name = "label11";
-            label11.Size = new Size(122, 20);
-            label11.TabIndex = 1;
-            label11.Text = "Nume Eveniment";
-            // 
-            // pictureBox7
-            // 
-            pictureBox7.Location = new Point(21, 36);
-            pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(73, 65);
-            pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox7.TabIndex = 0;
-            pictureBox7.TabStop = false;
-            // 
-            // panel4
-            // 
-            panel4.BackColor = Color.White;
-            panel4.Controls.Add(label12);
-            panel4.Controls.Add(label13);
-            panel4.Controls.Add(button14);
-            panel4.Controls.Add(button15);
-            panel4.Controls.Add(button16);
-            panel4.Controls.Add(label14);
-            panel4.Controls.Add(label15);
-            panel4.Controls.Add(pictureBox8);
-            panel4.Location = new Point(200, 381);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(357, 129);
-            panel4.TabIndex = 10;
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Location = new Point(39, 13);
-            label12.Name = "label12";
-            label12.Size = new Size(42, 20);
-            label12.TabIndex = 9;
-            label12.Text = "Activ";
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Location = new Point(107, 95);
-            label13.Name = "label13";
-            label13.Size = new Size(131, 20);
-            label13.TabIndex = 9;
-            label13.Text = "Interval Eveniment";
-            // 
-            // button14
-            // 
-            button14.BackColor = Color.White;
-            button14.FlatStyle = FlatStyle.Flat;
-            button14.Location = new Point(257, 15);
-            button14.Name = "button14";
-            button14.Size = new Size(79, 29);
-            button14.TabIndex = 7;
-            button14.Text = "Preview";
-            button14.UseVisualStyleBackColor = false;
-            button14.Click += button14_Click;
-            // 
-            // button15
-            // 
-            button15.BackColor = Color.White;
-            button15.FlatStyle = FlatStyle.Flat;
-            button15.Location = new Point(257, 51);
-            button15.Name = "button15";
-            button15.Size = new Size(79, 29);
-            button15.TabIndex = 6;
-            button15.Text = "Editeaza";
-            button15.UseVisualStyleBackColor = false;
-            button15.Click += button15_Click;
-            // 
-            // button16
-            // 
-            button16.BackColor = Color.White;
-            button16.FlatStyle = FlatStyle.Flat;
-            button16.Location = new Point(257, 85);
-            button16.Name = "button16";
-            button16.Size = new Size(79, 29);
-            button16.TabIndex = 5;
-            button16.Text = "Sterge";
-            button16.UseVisualStyleBackColor = false;
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Location = new Point(107, 59);
-            label14.Name = "label14";
-            label14.Size = new Size(109, 20);
-            label14.TabIndex = 3;
-            label14.Text = "Oameni Inscrisi";
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Location = new Point(107, 24);
-            label15.Name = "label15";
-            label15.Size = new Size(122, 20);
-            label15.TabIndex = 1;
-            label15.Text = "Nume Eveniment";
-            // 
-            // pictureBox8
-            // 
-            pictureBox8.Location = new Point(21, 36);
-            pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(73, 65);
-            pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox8.TabIndex = 0;
-            pictureBox8.TabStop = false;
-            // 
             // label7
             // 
             label7.AutoSize = true;
@@ -576,8 +364,6 @@
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1179, 707);
             Controls.Add(label7);
-            Controls.Add(panel4);
-            Controls.Add(panel3);
             Controls.Add(panel5);
             Controls.Add(button7);
             Controls.Add(panel2);
@@ -598,12 +384,6 @@
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -634,24 +414,6 @@
         private Button button9;
         private Label label3;
         private Label label5;
-        private Panel panel3;
-        private Label label8;
-        private Label label9;
-        private Button button10;
-        private Button button12;
-        private Button button13;
-        private Label label10;
-        private Label label11;
-        private PictureBox pictureBox7;
-        private Panel panel4;
-        private Label label12;
-        private Label label13;
-        private Button button14;
-        private Button button15;
-        private Button button16;
-        private Label label14;
-        private Label label15;
-        private PictureBox pictureBox8;
         private Label label7;
     }
 }
