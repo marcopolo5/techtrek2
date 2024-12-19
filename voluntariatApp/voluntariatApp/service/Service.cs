@@ -100,6 +100,7 @@ namespace voluntariatApp.service
         }
 
         public Organiser? getOrganiser(string cui) => this.organiserRepo.Find(cui);
+        public IEnumerable<Organiser>? getOrganiserList() => this.organiserRepo.FindAll();
 
         public void addEvent(long idEvent, string name, string cui, int numberOfParticipants, Location location, EventPeriod eventPeriod, string requirements, string description)
         {
