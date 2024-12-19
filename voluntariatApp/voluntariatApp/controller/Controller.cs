@@ -86,6 +86,6 @@ namespace voluntariatApp.controller
 
 		public IEnumerable<Organiser> GetAllCompanies() => this.service.getOrganiserList()!;
 
-
+		public void logout() => this.loggedInEntity = null;
 	}
 }

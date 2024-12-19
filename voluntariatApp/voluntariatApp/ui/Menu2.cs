@@ -11,344 +11,352 @@ using voluntariatApp.controller;
 
 namespace voluntariatApp
 {
-    public partial class Menu2 : Form
-    {
-        public Menu2()
-        {
-            InitializeComponent();
-        }
+	public partial class Menu2 : Form
+	{
+		public Menu2()
+		{
+			InitializeComponent();
+		}
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
+		private void panel2_Paint(object sender, PaintEventArgs e)
+		{
 
-        }
+		}
 
-        private void label1_Click(object sender, EventArgs e)
-        {
+		private void label1_Click(object sender, EventArgs e)
+		{
 
-        }
+		}
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            frmLogare signUp1 = new frmLogare();
-            this.Hide();
-            signUp1.Show();
-        }
+		private void button1_Click(object sender, EventArgs e)
+		{
+			frmLogare signUp1 = new frmLogare();
+			this.Hide();
+			signUp1.Show();
+		}
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            frmLogare signUp1 = new frmLogare();
-            this.Hide();
-            signUp1.Show();
-        }
+		private void button3_Click(object sender, EventArgs e)
+		{
+			frmLogare signUp1 = new frmLogare();
+			this.Hide();
+			signUp1.Show();
+		}
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
+		private void button1_Click_1(object sender, EventArgs e)
+		{
 
-        }
+		}
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
+		private void panel1_Paint(object sender, PaintEventArgs e)
+		{
 
-        }
+		}
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
+		private void pictureBox2_Click(object sender, EventArgs e)
+		{
 
-        }
+		}
 
-        private void button4_Click(object sender, EventArgs e)
-        {
+		private void button4_Click(object sender, EventArgs e)
+		{
 
-        }
+		}
 
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
+		private void pictureBox4_Click(object sender, EventArgs e)
+		{
 
-        }
+		}
 
-        private void button1_Click_2(object sender, EventArgs e)
-        {
-            Adeverinte adev = new Adeverinte();
-            this.Hide();
-            adev.Show();
-        }
+		private void button1_Click_2(object sender, EventArgs e)
+		{
+			Adeverinte adev = new Adeverinte();
+			this.Hide();
+			adev.Show();
+		}
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-            panel1.Visible = false;
-        }
+		private void button6_Click(object sender, EventArgs e)
+		{
+			panel1.Visible = false;
+		}
 
-        private void button4_Click_1(object sender, EventArgs e)
-        {
-            panel1.Visible = true;
-        }
+		private void button4_Click_1(object sender, EventArgs e)
+		{
+			panel1.Visible = true;
+		}
 
-        private void panel2_Paint_1(object sender, PaintEventArgs e)
-        {
+		private void panel2_Paint_1(object sender, PaintEventArgs e)
+		{
 
-        }
+		}
 
-        private void label5_Click(object sender, EventArgs e)
-        {
+		private void label5_Click(object sender, EventArgs e)
+		{
 
-        }
-        private void Button_Click(object sender, EventArgs e)
-        {
-            panel5.Controls.Clear();
+		}
+		private void Button_Click(object sender, EventArgs e)
+		{
+			panel5.Controls.Clear();
 
-            // Dimensiuni și spațiere
-            int labelWidth = 120; // Lățimea etichetei
-            int textBoxWidth = 250; // Lățimea TextBox-ului
-            int controlHeight = 40; // Înălțimea fiecărui control
-            int spacing = 20; // Spațiul dintre rânduri
-            int startX = 50; // Poziția X de început
-            int startY = 50; // Poziția Y de început
-            List<String> labels = new List<String> { "Nume", "Nr Participanti", "Perioada", "Conditii", "Despre" };
-            for (int i = 0; i < 5; i++)
-            {
-                // Creare Label
-                Label label = new Label();
-                label.Text = labels[i]; // Textul etichetei
-                label.Font = new Font("Constantia", 14);
-                label.Size = new System.Drawing.Size(labelWidth, controlHeight); // Dimensiuni
-                label.Location = new System.Drawing.Point(startX, startY + i * (controlHeight + spacing)); // Poziție
-                panel5.Controls.Add(label); // Adăugare în panel
+			// Dimensiuni și spațiere
+			int labelWidth = 120; // Lățimea etichetei
+			int textBoxWidth = 250; // Lățimea TextBox-ului
+			int controlHeight = 40; // Înălțimea fiecărui control
+			int spacing = 20; // Spațiul dintre rânduri
+			int startX = 50; // Poziția X de început
+			int startY = 50; // Poziția Y de început
+			List<String> labels = new List<String> { "Nume", "Nr Participanti", "Perioada", "Conditii", "Despre" };
+			for (int i = 0; i < 5; i++)
+			{
+				// Creare Label
+				Label label = new Label();
+				label.Text = labels[i]; // Textul etichetei
+				label.Font = new Font("Constantia", 14);
+				label.Size = new System.Drawing.Size(labelWidth, controlHeight); // Dimensiuni
+				label.Location = new System.Drawing.Point(startX, startY + i * (controlHeight + spacing)); // Poziție
+				panel5.Controls.Add(label); // Adăugare în panel
 
-                // Creare TextBox
-                TextBox textBox = new TextBox();
-                textBox.ReadOnly = true; // Doar citire
-                textBox.Text = $"ReadOnly {i + 1}"; // Text implicit
-                textBox.Font = new Font("Constantia", 14);
-                textBox.Size = new System.Drawing.Size(textBoxWidth, controlHeight); // Dimensiuni
-                textBox.Location = new System.Drawing.Point(startX + labelWidth + spacing, startY + i * (controlHeight + spacing)); // Poziție
-                panel5.Controls.Add(textBox); // Adăugare în panel
-            }
-        }
-        private void Button_Click2(object sender, EventArgs e)
-        {
-            panel5.Controls.Clear();
+				// Creare TextBox
+				TextBox textBox = new TextBox();
+				textBox.ReadOnly = true; // Doar citire
+				textBox.Text = $"ReadOnly {i + 1}"; // Text implicit
+				textBox.Font = new Font("Constantia", 14);
+				textBox.Size = new System.Drawing.Size(textBoxWidth, controlHeight); // Dimensiuni
+				textBox.Location = new System.Drawing.Point(startX + labelWidth + spacing, startY + i * (controlHeight + spacing)); // Poziție
+				panel5.Controls.Add(textBox); // Adăugare în panel
+			}
+		}
+		private void Button_Click2(object sender, EventArgs e)
+		{
+			panel5.Controls.Clear();
 
-            // Dimensiuni și spațiere
-            int labelWidth = 120; // Lățimea etichetei
-            int textBoxWidth = 250; // Lățimea TextBox-ului
-            int controlHeight = 40; // Înălțimea fiecărui control
-            int spacing = 20; // Spațiul dintre rânduri
-            int startX = 50; // Poziția X de început
-            int startY = 50; // Poziția Y de început
-            List<String> labels = new List<String> { "Nume", "Nr Participanti", "Perioada", "Conditii", "Despre" };
-            for (int i = 0; i < 5; i++)
-            {
-                // Creare Label
-                Label label = new Label();
-                label.Text = labels[i]; // Textul etichetei
-                label.Font = new Font("Constantia", 14);
-                label.Size = new System.Drawing.Size(labelWidth, controlHeight); // Dimensiuni
-                label.Location = new System.Drawing.Point(startX, startY + i * (controlHeight + spacing)); // Poziție
-                panel5.Controls.Add(label); // Adăugare în panel
+			// Dimensiuni și spațiere
+			int labelWidth = 120; // Lățimea etichetei
+			int textBoxWidth = 250; // Lățimea TextBox-ului
+			int controlHeight = 40; // Înălțimea fiecărui control
+			int spacing = 20; // Spațiul dintre rânduri
+			int startX = 50; // Poziția X de început
+			int startY = 50; // Poziția Y de început
+			List<String> labels = new List<String> { "Nume", "Nr Participanti", "Perioada", "Conditii", "Despre" };
+			for (int i = 0; i < 5; i++)
+			{
+				// Creare Label
+				Label label = new Label();
+				label.Text = labels[i]; // Textul etichetei
+				label.Font = new Font("Constantia", 14);
+				label.Size = new System.Drawing.Size(labelWidth, controlHeight); // Dimensiuni
+				label.Location = new System.Drawing.Point(startX, startY + i * (controlHeight + spacing)); // Poziție
+				panel5.Controls.Add(label); // Adăugare în panel
 
-                // Creare TextBox
-                TextBox textBox = new TextBox();
-                textBox.Text = $"ReadOnly {i + 1}"; // Text implicit
-                textBox.Font = new Font("Constantia", 14);
-                textBox.Size = new System.Drawing.Size(textBoxWidth, controlHeight); // Dimensiuni
-                textBox.Location = new System.Drawing.Point(startX + labelWidth + spacing, startY + i * (controlHeight + spacing)); // Poziție
-                panel5.Controls.Add(textBox); // Adăugare în panel
-            }
-            Button button = new Button();
-            button.Text = "Salveaza";
-            button.Size = new System.Drawing.Size(174, 61);
-            button.FlatStyle = FlatStyle.Flat;
-            button.Location = new System.Drawing.Point(200, 400);
-            button.FlatAppearance.BorderSize = 5;
-            button.FlatAppearance.BorderColor = Color.FromArgb(241, 201, 212);
-            button.BackColor = Color.FromArgb(171, 215, 206);
-            button.Font = new Font("Constantia", 16); // Create a new Font object with the desired properties
-            panel5.Controls.Add(button);
-        }
-        private void Menu2_Load(object sender, EventArgs e)
-        {
-            var yourEvents = Controller.getInstance().organizationEvents();
-            foreach (var ev in yourEvents)
-            {
-                Panel panel = new Panel();
-                panel.Size = new Size(350, 130);
-                panel.BackColor = Color.FromArgb(0, 255, 0);
-                panel.BorderStyle = BorderStyle.None;
-                panel.Location = new Point(200, 85);
+				// Creare TextBox
+				TextBox textBox = new TextBox();
+				textBox.Text = $"ReadOnly {i + 1}"; // Text implicit
+				textBox.Font = new Font("Constantia", 14);
+				textBox.Size = new System.Drawing.Size(textBoxWidth, controlHeight); // Dimensiuni
+				textBox.Location = new System.Drawing.Point(startX + labelWidth + spacing, startY + i * (controlHeight + spacing)); // Poziție
+				panel5.Controls.Add(textBox); // Adăugare în panel
+			}
+			Button button = new Button();
+			button.Text = "Salveaza";
+			button.Size = new System.Drawing.Size(174, 61);
+			button.FlatStyle = FlatStyle.Flat;
+			button.Location = new System.Drawing.Point(200, 400);
+			button.FlatAppearance.BorderSize = 5;
+			button.FlatAppearance.BorderColor = Color.FromArgb(241, 201, 212);
+			button.BackColor = Color.FromArgb(171, 215, 206);
+			button.Font = new Font("Constantia", 16); // Create a new Font object with the desired properties
+			panel5.Controls.Add(button);
+		}
+		private void Menu2_Load(object sender, EventArgs e)
+		{
+			var yourEvents = Controller.getInstance().organizationEvents();
+			foreach (var ev in yourEvents)
+			{
+				Panel panel = new Panel();
+				panel.Size = new Size(350, 130);
+				panel.BackColor = Color.FromArgb(0, 255, 0);
+				panel.BorderStyle = BorderStyle.None;
+				panel.Location = new Point(200, 85);
 
-                Label label = new Label();
-                label.Size = new Size(130, 20);
-                label.BorderStyle = BorderStyle.None;
-                label.Location = new Point(107, 24);
-                label.Text = $"{ev.Name}";
+				Label label = new Label();
+				label.Size = new Size(130, 20);
+				label.BorderStyle = BorderStyle.None;
+				label.Location = new Point(107, 24);
+				label.Text = $"{ev.Name}";
 
-                Label label2 = new Label();
-                label2.Size = new Size(130, 20);
-                label2.BorderStyle = BorderStyle.None;
-                label2.Location = new Point(107, 60);
-                label2.Text = $"Capacitate:{ev.NumberOfParticipants}";
+				Label label2 = new Label();
+				label2.Size = new Size(130, 20);
+				label2.BorderStyle = BorderStyle.None;
+				label2.Location = new Point(107, 60);
+				label2.Text = $"Capacitate:{ev.NumberOfParticipants}";
 
-            Label label3 = new Label();
-                label3.Size = new Size(130, 20);
-                label3.BackColor = Color.FromArgb(0, 255, 0);
-                label3.BorderStyle = BorderStyle.None;
-                label3.Location = new Point(107, 95);
-            label3.Text = "Interval Eveniment";
+				Label label3 = new Label();
+				label3.Size = new Size(130, 20);
+				label3.BackColor = Color.FromArgb(0, 255, 0);
+				label3.BorderStyle = BorderStyle.None;
+				label3.Location = new Point(107, 95);
+				label3.Text = "Interval Eveniment";
 
-            Label label4 = new Label();
-            label4.Size = new Size(50, 20);
-            label4.BorderStyle = BorderStyle.None;
-            label4.Location = new Point(39, 13);
-            label4.Text = "Activ";
-            
-            Button button = new Button();
-            button.Size = new Size(80, 30);
-            button.FlatStyle = FlatStyle.Flat;
-            button.Location = new Point(257, 15);
-            button.Text = "Preview";
-            button.Click += new EventHandler(Button_Click);
+				Label label4 = new Label();
+				label4.Size = new Size(50, 20);
+				label4.BorderStyle = BorderStyle.None;
+				label4.Location = new Point(39, 13);
+				label4.Text = "Activ";
 
-            Button button2 = new Button();
-            button2.Size = new Size(80, 30);
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Location = new Point(257, 51);
-            button2.Text = "Editeaza";
-            button2.Click += new EventHandler(Button_Click2);
+				Button button = new Button();
+				button.Size = new Size(80, 30);
+				button.FlatStyle = FlatStyle.Flat;
+				button.Location = new Point(257, 15);
+				button.Text = "Preview";
+				button.Click += new EventHandler(Button_Click);
 
-            Button button3 = new Button();
-            button3.Size = new Size(80, 30);
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Location = new Point(257, 85);
-            button3.Text = "Sterge";
+				Button button2 = new Button();
+				button2.Size = new Size(80, 30);
+				button2.FlatStyle = FlatStyle.Flat;
+				button2.Location = new Point(257, 51);
+				button2.Text = "Editeaza";
+				button2.Click += new EventHandler(Button_Click2);
+
+				Button button3 = new Button();
+				button3.Size = new Size(80, 30);
+				button3.FlatStyle = FlatStyle.Flat;
+				button3.Location = new Point(257, 85);
+				button3.Text = "Sterge";
 
 
-            panel.Controls.Add(button);
-            panel.Controls.Add(button2);
-            panel.Controls.Add(button3);
-            panel.Controls.Add(label4);
-            panel.Controls.Add(label);
-            panel.Controls.Add(label2);
-            panel.Controls.Add(label3);
-            
-            this.Controls.Add(panel);
-            }
-        }
+				panel.Controls.Add(button);
+				panel.Controls.Add(button2);
+				panel.Controls.Add(button3);
+				panel.Controls.Add(label4);
+				panel.Controls.Add(label);
+				panel.Controls.Add(label2);
+				panel.Controls.Add(label3);
 
-        private void button3_Click_1(object sender, EventArgs e)
-        {
-            CautareUseri cautari = new CautareUseri();
-            this.Hide();
-            cautari.Show();
-        }
+				this.Controls.Add(panel);
+			}
+		}
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Inscrieri inscrieri = new Inscrieri();
-            this.Hide();
-            inscrieri.Show();
-        }
+		private void button3_Click_1(object sender, EventArgs e)
+		{
+			CautareUseri cautari = new CautareUseri();
+			this.Hide();
+			cautari.Show();
+		}
 
-        private void button7_Click(object sender, EventArgs e)
-        {
-            AdaugaAnunt adaugaAnunt = new AdaugaAnunt();
-            this.Hide();
-            adaugaAnunt.Show();
-        }
+		private void button2_Click(object sender, EventArgs e)
+		{
+			Inscrieri inscrieri = new Inscrieri();
+			this.Hide();
+			inscrieri.Show();
+		}
 
-        private void label6_Click(object sender, EventArgs e)
-        {
+		private void button7_Click(object sender, EventArgs e)
+		{
+			AdaugaAnunt adaugaAnunt = new AdaugaAnunt();
+			this.Hide();
+			adaugaAnunt.Show();
+		}
 
-        }
+		private void label6_Click(object sender, EventArgs e)
+		{
 
-        private void button14_Click(object sender, EventArgs e)
-        {
-            panel5.Controls.Clear();
+		}
 
-            // Dimensiuni și spațiere
-            int labelWidth = 120; // Lățimea etichetei
-            int textBoxWidth = 250; // Lățimea TextBox-ului
-            int controlHeight = 40; // Înălțimea fiecărui control
-            int spacing = 20; // Spațiul dintre rânduri
-            int startX = 50; // Poziția X de început
-            int startY = 50; // Poziția Y de început
-            List<String> labels = new List<String> { "Nume", "Nr Participanti", "Perioada", "Conditii", "Despre" };
-            for (int i = 0; i < 5; i++)
-            {
-                // Creare Label
-                Label label = new Label();
-                label.Text = labels[i]; // Textul etichetei
-                label.Font = new Font("Constantia", 14);
-                label.Size = new System.Drawing.Size(labelWidth, controlHeight); // Dimensiuni
-                label.Location = new System.Drawing.Point(startX, startY + i * (controlHeight + spacing)); // Poziție
-                panel5.Controls.Add(label); // Adăugare în panel
+		private void button14_Click(object sender, EventArgs e)
+		{
+			panel5.Controls.Clear();
 
-                // Creare TextBox
-                TextBox textBox = new TextBox();
-                textBox.ReadOnly = true; // Doar citire
-                textBox.Text = $"ReadOnly {i + 1}"; // Text implicit
-                textBox.Font = new Font("Constantia", 14);
-                textBox.Size = new System.Drawing.Size(textBoxWidth, controlHeight); // Dimensiuni
-                textBox.Location = new System.Drawing.Point(startX + labelWidth + spacing, startY + i * (controlHeight + spacing)); // Poziție
-                panel5.Controls.Add(textBox); // Adăugare în panel
-            }
-        }
+			// Dimensiuni și spațiere
+			int labelWidth = 120; // Lățimea etichetei
+			int textBoxWidth = 250; // Lățimea TextBox-ului
+			int controlHeight = 40; // Înălțimea fiecărui control
+			int spacing = 20; // Spațiul dintre rânduri
+			int startX = 50; // Poziția X de început
+			int startY = 50; // Poziția Y de început
+			List<String> labels = new List<String> { "Nume", "Nr Participanti", "Perioada", "Conditii", "Despre" };
+			for (int i = 0; i < 5; i++)
+			{
+				// Creare Label
+				Label label = new Label();
+				label.Text = labels[i]; // Textul etichetei
+				label.Font = new Font("Constantia", 14);
+				label.Size = new System.Drawing.Size(labelWidth, controlHeight); // Dimensiuni
+				label.Location = new System.Drawing.Point(startX, startY + i * (controlHeight + spacing)); // Poziție
+				panel5.Controls.Add(label); // Adăugare în panel
 
-        private void button15_Click(object sender, EventArgs e)
-        {
-            panel5.Controls.Clear();
+				// Creare TextBox
+				TextBox textBox = new TextBox();
+				textBox.ReadOnly = true; // Doar citire
+				textBox.Text = $"ReadOnly {i + 1}"; // Text implicit
+				textBox.Font = new Font("Constantia", 14);
+				textBox.Size = new System.Drawing.Size(textBoxWidth, controlHeight); // Dimensiuni
+				textBox.Location = new System.Drawing.Point(startX + labelWidth + spacing, startY + i * (controlHeight + spacing)); // Poziție
+				panel5.Controls.Add(textBox); // Adăugare în panel
+			}
+		}
 
-            // Dimensiuni și spațiere
-            int labelWidth = 120; // Lățimea etichetei
-            int textBoxWidth = 250; // Lățimea TextBox-ului
-            int controlHeight = 40; // Înălțimea fiecărui control
-            int spacing = 20; // Spațiul dintre rânduri
-            int startX = 50; // Poziția X de început
-            int startY = 50; // Poziția Y de început
-            List<String> labels = new List<String> { "Nume", "Nr Participanti", "Perioada", "Conditii", "Despre" };
-            for (int i = 0; i < 5; i++)
-            {
-                // Creare Label
-                Label label = new Label();
-                label.Text = labels[i]; // Textul etichetei
-                label.Font = new Font("Constantia", 14);
-                label.Size = new System.Drawing.Size(labelWidth, controlHeight); // Dimensiuni
-                label.Location = new System.Drawing.Point(startX, startY + i * (controlHeight + spacing)); // Poziție
-                panel5.Controls.Add(label); // Adăugare în panel
+		private void button15_Click(object sender, EventArgs e)
+		{
+			panel5.Controls.Clear();
 
-                // Creare TextBox
-                TextBox textBox = new TextBox();
-                textBox.Text = $"ReadOnly {i + 1}"; // Text implicit
-                textBox.Font = new Font("Constantia", 14);
-                textBox.Size = new System.Drawing.Size(textBoxWidth, controlHeight); // Dimensiuni
-                textBox.Location = new System.Drawing.Point(startX + labelWidth + spacing, startY + i * (controlHeight + spacing)); // Poziție
-                panel5.Controls.Add(textBox); // Adăugare în panel
-            }
-            Button button = new Button();
-            button.Text = "Salveaza";
-            button.Size = new System.Drawing.Size(174, 61);
-            button.FlatStyle = FlatStyle.Flat;
-            button.Location = new System.Drawing.Point(200, 400);
-            button.FlatAppearance.BorderSize = 5;
-            button.FlatAppearance.BorderColor = Color.FromArgb(241, 201, 212);
-            button.BackColor = Color.FromArgb(171, 215, 206);
-            button.Font = new Font("Constantia", 16); // Create a new Font object with the desired properties
-            panel5.Controls.Add(button);
-        }
+			// Dimensiuni și spațiere
+			int labelWidth = 120; // Lățimea etichetei
+			int textBoxWidth = 250; // Lățimea TextBox-ului
+			int controlHeight = 40; // Înălțimea fiecărui control
+			int spacing = 20; // Spațiul dintre rânduri
+			int startX = 50; // Poziția X de început
+			int startY = 50; // Poziția Y de început
+			List<String> labels = new List<String> { "Nume", "Nr Participanti", "Perioada", "Conditii", "Despre" };
+			for (int i = 0; i < 5; i++)
+			{
+				// Creare Label
+				Label label = new Label();
+				label.Text = labels[i]; // Textul etichetei
+				label.Font = new Font("Constantia", 14);
+				label.Size = new System.Drawing.Size(labelWidth, controlHeight); // Dimensiuni
+				label.Location = new System.Drawing.Point(startX, startY + i * (controlHeight + spacing)); // Poziție
+				panel5.Controls.Add(label); // Adăugare în panel
 
-        private void button11_Click(object sender, EventArgs e)
-        {
+				// Creare TextBox
+				TextBox textBox = new TextBox();
+				textBox.Text = $"ReadOnly {i + 1}"; // Text implicit
+				textBox.Font = new Font("Constantia", 14);
+				textBox.Size = new System.Drawing.Size(textBoxWidth, controlHeight); // Dimensiuni
+				textBox.Location = new System.Drawing.Point(startX + labelWidth + spacing, startY + i * (controlHeight + spacing)); // Poziție
+				panel5.Controls.Add(textBox); // Adăugare în panel
+			}
+			Button button = new Button();
+			button.Text = "Salveaza";
+			button.Size = new System.Drawing.Size(174, 61);
+			button.FlatStyle = FlatStyle.Flat;
+			button.Location = new System.Drawing.Point(200, 400);
+			button.FlatAppearance.BorderSize = 5;
+			button.FlatAppearance.BorderColor = Color.FromArgb(241, 201, 212);
+			button.BackColor = Color.FromArgb(171, 215, 206);
+			button.Font = new Font("Constantia", 16); // Create a new Font object with the desired properties
+			panel5.Controls.Add(button);
+		}
 
-        }
+		private void button11_Click(object sender, EventArgs e)
+		{
 
-        private void label2_Click(object sender, EventArgs e)
-        {
+		}
 
-        }
+		private void label2_Click(object sender, EventArgs e)
+		{
 
-        private void button5_Click(object sender, EventArgs e)
-        {
+		}
 
-        }
-    }
+		private void button5_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void button17_Click(object sender, EventArgs e)
+		{
+			Controller.getInstance().logout();
+			frmLogin form = new frmLogin();
+			this.Close();
+			form.Show();
+		}
+	}
 }
